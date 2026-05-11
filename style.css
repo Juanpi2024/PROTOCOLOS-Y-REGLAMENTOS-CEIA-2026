@@ -208,7 +208,7 @@ h1, h2, h3 {
   background: var(--bg-dark-alt);
   width: 100%;
   max-width: 900px;
-  max-height: 85vh;
+  height: 85vh; /* Fixed height for scrolling */
   border-radius: 32px;
   position: relative;
   display: flex;
@@ -218,6 +218,14 @@ h1, h2, h3 {
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-premium);
+}
+
+#modal-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 #modal-overlay.active .modal-window {
@@ -234,23 +242,24 @@ h1, h2, h3 {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   border: none;
-  width: 44px;
-  height: 44px;
+  padding: 0.5rem 1rem;
   border-radius: 12px;
   color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
   transition: var(--transition);
-  z-index: 10;
+  z-index: 100;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .modal-close-btn:hover {
   background: #ef4444;
-  transform: rotate(90deg);
+  transform: translateY(-2px);
 }
 
 .protocol-badge {
