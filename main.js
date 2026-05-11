@@ -1,6 +1,6 @@
 /**
  * CEIA Juanita Zúñiga - Protocol Management System
- * Senior Implementation: Dynamic Card Generation for Protocol Points
+ * Senior Implementation: Bug Fixes and UX Refinement
  */
 
 const ProtocolApp = {
@@ -53,12 +53,23 @@ const ProtocolApp = {
         this.ui.modalOverlay.classList.add('active');
         this.ui.body.style.overflow = 'hidden';
         this.state.isModalOpen = true;
+
+        // Ensure scroll starts at top
+        const modalBody = this.ui.modalContent.querySelector('.modal-body');
+        if (modalBody) modalBody.scrollTop = 0;
     },
 
     closeModal() {
         this.ui.modalOverlay.classList.remove('active');
         this.ui.body.style.overflow = '';
         this.state.isModalOpen = false;
+        
+        // Clear content after animation to prevent layout shifts
+        setTimeout(() => {
+            if (!this.state.isModalOpen) {
+                this.ui.modalContent.innerHTML = '';
+            }
+        }, 400);
     },
 
     renderProtocol(data) {
@@ -70,10 +81,7 @@ const ProtocolApp = {
             const isNumbered = /^[0-9]+(\.-|\.)|^(a|b|c|f|h)\)|^[0-9]+°/.test(para);
 
             if (isTitle || isNumbered) {
-                // Save previous card if it exists
                 if (currentCard) cards.push(currentCard);
-                
-                // Start new card
                 currentCard = {
                     title: para,
                     content: [],
@@ -82,12 +90,10 @@ const ProtocolApp = {
             } else if (currentCard) {
                 currentCard.content.push(para);
             } else {
-                // Initial paragraphs before any title/number
                 cards.push({ title: '', content: [para], type: 'intro' });
             }
         });
         
-        // Push last card
         if (currentCard) cards.push(currentCard);
 
         const cardsHtml = cards.map(card => `
@@ -99,7 +105,7 @@ const ProtocolApp = {
 
         this.ui.modalContent.innerHTML = `
             <div class="modal-header">
-                <span class="protocol-badge">Copia Fiel CEIA</span>
+                <span class="protocol-badge">Documento Oficial CEIA</span>
                 <h1>${data.titulo}</h1>
             </div>
             <div class="modal-body">
