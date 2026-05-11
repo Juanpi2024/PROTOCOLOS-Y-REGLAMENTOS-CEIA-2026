@@ -1,5 +1,3 @@
-import './style.css'
-
 let protocolsData = null;
 
 async function loadData() {
