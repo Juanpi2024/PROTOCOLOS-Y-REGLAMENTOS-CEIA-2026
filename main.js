@@ -1,6 +1,6 @@
 /**
  * CEIA Juanita Zúñiga - Protocol Management System
- * Interactive Dashboard Implementation
+ * Bug Fix: Section parsing and dashboard organization
  */
 
 const ProtocolApp = {
@@ -65,7 +65,6 @@ const ProtocolApp = {
         return this.state.data[key];
     },
 
-    // First Level: Dashboard of sections
     renderDashboard() {
         const data = this.getProtocolData();
         const sections = this.processSections(data.contenido_completo);
@@ -80,7 +79,7 @@ const ProtocolApp = {
                     ${sections.map((sec, index) => `
                         <div class="section-tile" onclick="ProtocolApp.renderDetail(${index})">
                             <h3>${sec.title}</h3>
-                            <div class="tile-footer">Leer más</div>
+                            <div class="tile-footer">Ver contenido completo →</div>
                         </div>
                     `).join('')}
                 </div>
@@ -88,7 +87,6 @@ const ProtocolApp = {
         `;
     },
 
-    // Second Level: Full text of a specific section
     renderDetail(index) {
         const data = this.getProtocolData();
         const sections = this.processSections(data.contenido_completo);
@@ -110,38 +108,51 @@ const ProtocolApp = {
             </div>
         `;
         
-        // Reset scroll to top
         this.ui.modalContent.querySelector('.modal-body').scrollTop = 0;
     },
 
     processSections(paragraphs) {
         const sections = [];
+        let introSection = { title: 'INTRODUCCIÓN Y MARCO GENERAL', content: [] };
         let currentSection = null;
 
-        paragraphs.forEach(para => {
-            const isTitle = para === para.toUpperCase() && para.length > 5;
-            const isNumbered = /^[0-9]+(\.-|\.)|^(a|b|c|f|h)\)|^[0-9]+°/.test(para);
+        // Pattern for section detection:
+        // 1. All caps titles (at least 4 chars)
+        // 2. Numbered points (1., 1.-, 1.1., 1.1, 4.1. etc.)
+        // 3. Lettered points (a), b), etc.)
+        const titleRegex = /^[A-ZÁÉÍÓÚÑ\s]{4,}(\.|$)/;
+        const numberRegex = /^[0-9]+(\.[0-9]+)*(\.|\.-|\s|$)/;
+        const letterRegex = /^[a-z]\)/i;
 
-            if (isTitle || isNumbered) {
+        paragraphs.forEach(para => {
+            const isTitle = titleRegex.test(para);
+            const isPoint = numberRegex.test(para) || letterRegex.test(para);
+
+            if (isTitle || isPoint) {
                 if (currentSection) sections.push(currentSection);
                 currentSection = {
                     title: para,
                     content: []
                 };
-            } else if (currentSection) {
-                currentSection.content.push(para);
             } else {
-                // Intro text
-                sections.push({ title: 'Introducción y Contexto', content: [para] });
+                if (currentSection) {
+                    currentSection.content.push(para);
+                } else {
+                    introSection.content.push(para);
+                }
             }
         });
 
         if (currentSection) sections.push(currentSection);
+        
+        // Add intro at start if it has text
+        if (introSection.content.length > 0) {
+            sections.unshift(introSection);
+        }
+        
         return sections;
     }
 };
 
-// Global reference for onclick handlers
 window.ProtocolApp = ProtocolApp;
-
 document.addEventListener('DOMContentLoaded', () => ProtocolApp.init());
