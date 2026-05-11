@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEIA Juanita Zúñiga - Protocolos y Reglamentos 2026</title>
-    <meta name="description" content="Portal oficial de protocolos y reglamentos del CEIA Juanita Zúñiga Fuentes. Información para toda la comunidad educativa.">
+    <title>Protocolos y Reglamentos 2026 - CEIA Juanita Zúñiga</title>
+    <meta name="description" content="Portal oficial de protocolos y reglamentos del CEIA Juanita Zúñiga Fuentes de Parral.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +20,15 @@
 <body>
 
     <main class="hero">
-        <span class="institution-name">CEIA Juanita Zúñiga Fuentes</span>
-        <h1>Protocolos y Reglamentos <span style="color: var(--primary);">2026</span></h1>
-        <p>Información oficial, normativa y procedimientos para asegurar una convivencia escolar sana y un entorno de aprendizaje seguro.</p>
+        <div class="logo-container">
+            <!-- Nota: El usuario debe guardar su logo como assets/logo.png -->
+            <img src="./assets/logo.png" alt="Logo CEIA Juanita Zúñiga" class="logo-img" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
+            <div id="logo-fallback" style="display:none; font-size: 3rem; margin-bottom: 1rem;">🏛️</div>
+            <span class="institution-name">CEIA Juanita Zúñiga Fuentes</span>
+        </div>
+        
+        <h1>Protocolos y Reglamentos <span style="color: var(--secondary); background: var(--primary); padding: 0 10px; border-radius: 8px;">2026</span></h1>
+        <p>Documentación oficial y procedimientos institucionales actualizados para toda la comunidad educativa de Parral.</p>
 
         <section class="protocol-grid">
             <!-- Dispositivos Móviles -->
@@ -32,7 +38,7 @@
                 </div>
                 <h2>Uso de Dispositivos</h2>
                 <p>Regulación sobre celulares y dispositivos electrónicos según Ley 21.801.</p>
-                <button class="btn-premium">Ver Protocolo</button>
+                <button class="btn-premium">Acceder al Protocolo</button>
             </article>
 
             <!-- Cámaras de Seguridad -->
@@ -42,9 +48,13 @@
                 </div>
                 <h2>Cámaras de Vigilancia</h2>
                 <p>Normativa de uso, privacidad y seguridad de registros audiovisuales.</p>
-                <button class="btn-premium">Ver Protocolo</button>
+                <button class="btn-premium">Acceder al Protocolo</button>
             </article>
         </section>
+
+        <footer class="footer">
+            <p class="signature">APP CREADA POR <span>JUAN P. RAMIREZ</span></p>
+        </footer>
     </main>
 
     <!-- Global Modal System -->
