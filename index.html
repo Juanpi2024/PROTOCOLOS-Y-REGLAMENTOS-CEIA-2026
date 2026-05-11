@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolos Institucionales | CEIA Juanita Zúñiga Fuentes</title>
+    <meta name="description" content="Visualización interactiva de protocolos institucionales sobre uso de dispositivos móviles y televigilancia.">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <main class="landing-page">
+            <header class="landing-header">
+                <div class="logo">CEIA Juanita Zúñiga</div>
+                <h1>Protocolos y Reglamentos 2026</h1>
+                <p>Información oficial y normativa para toda la comunidad educativa.</p>
+            </header>
+
+            <div class="protocol-grid">
+                <div class="protocol-card" id="btn-telefonos">
+                    <div class="card-icon">📱</div>
+                    <h2>Uso de Dispositivos Móviles</h2>
+                    <p>Regulación sobre celulares y dispositivos electrónicos según Ley 21.801.</p>
+                    <button class="btn-open">Ver Protocolo</button>
+                </div>
+
+                <div class="protocol-card" id="btn-camaras">
+                    <div class="card-icon">📷</div>
+                    <h2>Cámaras de Televigilancia</h2>
+                    <p>Normativa sobre seguridad, privacidad y resguardo de grabaciones.</p>
+                    <button class="btn-open">Ver Protocolo</button>
+                </div>
+            </div>
+
+            <footer class="landing-footer">
+                Ley 21.801 & Ley 19.628 | © 2026 Juan Pablo Estrategias
+            </footer>
+        </main>
+
+        <!-- Modal Structure -->
+        <div id="modal-overlay" class="modal-overlay">
+            <div class="modal-container">
+                <button class="modal-close" id="modal-close">&times;</button>
+                <div class="modal-content" id="modal-content">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

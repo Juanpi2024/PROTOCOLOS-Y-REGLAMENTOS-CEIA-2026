@@ -1,0 +1,66 @@
+{
+  "protocolo_telefonos": {
+    "titulo": "PROTOCOLO: PROHIBIR Y REGULAR EL USO DE DISPOSITIVOS MÓVILES ELECTRÓNICOS DE COMUNICACIÓN PERSONAL EN ESTABLECIMIENTOS EDUCACIONALES. LEY 21.801.",
+    "introduccion": "El uso de dispositivos móviles en el contexto educativo ha generado diversos impactos en los procesos de enseñanza y aprendizaje, la convivencia escolar y el bienestar socioemocional de los estudiantes. En este marco, la normativa educacional vigente establece la prohibición del uso de dispositivos móviles en establecimientos educacionales, resguardando el desarrollo integral de los estudiantes y promoviendo entornos educativos favorables para el aprendizaje, la interacción social y la convivencia.",
+    "marco_legal": "Ley N° 21.801, que regula Artículo 10 bis.- Prohíbase el uso de dispositivos móviles electrónicos de comunicación personal, en adelante \"dispositivos móviles\", en los establecimientos educacionales que imparten niveles de educación parvularia, básica o media.",
+    "objetivo": "Regular el uso de teléfonos móviles y otros dispositivos electrónicos de comunicación dentro del CEIA Juanita Zúñiga Fuentes, asegurando condiciones adecuadas para el aprendizaje, la seguridad, la convivencia escolar y la protección de la privacidad de todos los integrantes de la comunidad educativa.",
+    "alcance": "Este protocolo aplica a estudiantes, apoderados, docentes, asistentes de la educación, equipo directivo.",
+    "fundamentacion": "El uso excesivo o inapropiado de dispositivos móviles puede generar riesgos en el desarrollo cognitivo, afectivo, social y físico de niños, niñas y jóvenes. Se entenderá por “uso” toda interacción, manipulación o empleo del dispositivo móvil en el contexto educativo. La prohibición se vincula estrictamente al “uso” y no al porte.",
+    "excepciones": [
+      {
+        "id": "a",
+        "titulo": "Apoyos vinculados a Necesidades Educativas Especiales (NEE)",
+        "descripcion": "Debidamente acreditados por profesional competente. Requiere certificado que acredite el uso adecuado como ayuda técnica."
+      },
+      {
+        "id": "b",
+        "titulo": "Condición de salud",
+        "descripcion": "Requiere monitoreo o uso específico de aplicaciones médicas, acreditada por certificación médica."
+      },
+      {
+        "id": "c",
+        "titulo": "Uso pedagógico autorizado",
+        "descripcion": "Para actividades curriculares, evaluativas o formativas específicas, contempladas en la planificación de la clase visada por UTP."
+      },
+      {
+        "id": "f",
+        "titulo": "Emergencias y/o situaciones de seguridad",
+        "descripcion": "Evaluadas por equipo directivo conforme a procedimiento."
+      }
+    ],
+    "medidas_disciplinarias": [
+      {
+        "falta": "1° Falta",
+        "acciones": "Registro en hoja de vida, Diálogo reflexivo por parte del profesor, estudiante (mayor de edad) y/o apoderado."
+      },
+      {
+        "falta": "2° Falta",
+        "acciones": "Registro en hoja de vida, Citación apoderado, entrevista con Inspectoría general."
+      },
+      {
+        "falta": "3° Falta",
+        "acciones": "Registro en hoja de vida, Suspensión de 1 a 3 días (gradual: 1 día, 2 días, 3 días - Falta grave)."
+      }
+    ],
+    "faltas_gravisimas": "Cualquier difusión de registro para humillar/acosar; vulneración grave de intimidad; conductas que pudieran constituir delito; daño significativo a la convivencia.",
+    "horarios_permitidos": {
+      "mañana": ["10:00 - 10:15", "11:40 - 11:45"],
+      "tarde": ["15:30 - 15:45", "17:10 - 17:15"],
+      "vespertina": ["20:30 - 20:40", "22:10 - 22:15"]
+    }
+  },
+  "protocolo_camaras": {
+    "titulo": "PROTOCOLO DE USO DE CÁMARAS DE TELEVIGILANCIA",
+    "objetivo": "Regular la instalación, uso, acceso y resguardo de las cámaras de tele vigilancia, asegurando un uso legal, proporcional y exclusivo para fines de seguridad.",
+    "introduccion": "El CEIA Juanita Zúñiga Fuentes implementa un sistema de cámaras de tele vigilancia con la finalidad de fortalecer la seguridad de la comunidad educativa, prevenir situaciones de violencia, resguardar la infraestructura y apoyar la gestión de la convivencia escolar.",
+    "marco_legal": "Ley N° 19.628 sobre Protección de la Vida Privada, Código del Trabajo (art 5°), Ley N° 20.370 (LGE), Ley de Convivencia, Buen Trato y Bienestar.",
+    "ubicaciones_autorizadas": ["Entrada del establecimiento", "Hall de acceso", "Pasillo ala norte y sur", "Patio posterior gimnasio techado"],
+    "prohibiciones_ubicacion": ["Baños", "Camarines", "Oficinas privadas", "Espacios internos que vulneren la privacidad"],
+    "custodia": {
+      "responsables": ["Director Juan José Araya Chandía", "María de los Ángeles Canales (Diurna)", "Matías Batarce Hernández (Vespertina)"],
+      "almacenamiento": "30 días corridos (prorrogable en caso de investigación)"
+    },
+    "restricciones_uso": ["No difundir grabaciones", "No publicar en redes sociales", "No usar para control laboral"],
+    "procedimiento_solicitud": "Solicitud formal al director(a) quien evaluará la pertinencia."
+  }
+}
