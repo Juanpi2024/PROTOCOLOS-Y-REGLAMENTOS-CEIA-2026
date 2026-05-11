@@ -1,64 +1,122 @@
-let protocolsData = null;
+/**
+ * CEIA Juanita Zúñiga - Protocol Management System
+ * Senior Implementation: Modularity, Error Handling, and UX Refinement
+ */
 
-async function loadData() {
-    try {
-        const response = await fetch('./data/protocolos.json');
-        protocolsData = await response.json();
-    } catch (error) {
-        console.error('Error loading data:', error);
-    }
-}
+const ProtocolApp = {
+    // State management
+    state: {
+        data: null,
+        isModalOpen: false,
+        activeProtocol: null
+    },
 
-const modalOverlay = document.getElementById('modal-overlay');
-const modalContent = document.getElementById('modal-content');
-const modalClose = document.getElementById('modal-close');
+    // UI Elements
+    ui: {
+        modalOverlay: document.getElementById('modal-overlay'),
+        modalContent: document.getElementById('modal-content'),
+        body: document.body
+    },
 
-function openModal(key) {
-    if (!protocolsData) return;
-    
-    const data = key === 'telefonos' ? protocolsData.protocolo_telefonos : protocolsData.protocolo_camaras;
-    
-    let html = `
-        <div class="header">
-            <div class="badge">Copia Fiel y Oficial CEIA 2026</div>
-            <h1>${data.titulo}</h1>
-        </div>
+    // Initialization
+    async init() {
+        console.log('🚀 Initializing Protocol App...');
+        await this.loadData();
+        this.bindEvents();
+    },
 
-        <div class="modal-body-scroll">
-            <div class="full-content-wrapper">
-                ${data.contenido_completo.map(para => {
-                    // Detect if it looks like a title/subtitle (all caps or numbered)
-                    const isTitle = para === para.toUpperCase() && para.length > 5;
-                    const isNumbered = /^[0-9](\.-|\.)|^(a|b|c|f)\)/i.test(para);
-                    
-                    if (isTitle) {
-                        return `<h2 class="full-content-title">${para}</h2>`;
-                    } else if (isNumbered) {
-                        return `<h3 class="full-content-subtitle">${para}</h3>`;
-                    } else {
-                        return `<p class="full-content-text">${para.replace(/\n/g, '<br>')}</p>`;
-                    }
-                }).join('')}
+    // Data handling
+    async loadData() {
+        try {
+            const response = await fetch('./data/protocolos.json');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            this.state.data = await response.json();
+            console.log('✅ Protocols loaded successfully');
+        } catch (error) {
+            console.error('❌ Failed to load protocols:', error);
+            this.showErrorMessage();
+        }
+    },
+
+    // Event binding
+    bindEvents() {
+        // Card clicks
+        document.getElementById('btn-telefonos')?.addEventListener('click', () => this.openModal('telefonos'));
+        document.getElementById('btn-camaras')?.addEventListener('click', () => this.openModal('camaras'));
+
+        // Modal close triggers
+        document.getElementById('modal-close')?.addEventListener('click', () => this.closeModal());
+        
+        this.ui.modalOverlay.addEventListener('click', (e) => {
+            if (e.target === this.ui.modalOverlay) this.closeModal();
+        });
+
+        // Keyboard support
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.state.isModalOpen) this.closeModal();
+        });
+    },
+
+    // Modal Logic
+    openModal(key) {
+        if (!this.state.data) return;
+        
+        const protocolKey = key === 'telefonos' ? 'protocolo_telefonos' : 'protocolo_camaras';
+        const data = this.state.data[protocolKey];
+        
+        if (!data) return;
+
+        this.state.activeProtocol = key;
+        this.renderProtocol(data);
+        
+        this.ui.modalOverlay.classList.add('active');
+        this.ui.body.style.overflow = 'hidden';
+        this.state.isModalOpen = true;
+    },
+
+    closeModal() {
+        this.ui.modalOverlay.classList.remove('active');
+        this.ui.body.style.overflow = '';
+        this.state.isModalOpen = false;
+        
+        // Reset scroll for next opening
+        setTimeout(() => {
+            this.ui.modalContent.closest('.modal-body').scrollTop = 0;
+        }, 400);
+    },
+
+    // Rendering Engine
+    renderProtocol(data) {
+        const contentHtml = data.contenido_completo.map(para => {
+            const isTitle = para === para.toUpperCase() && para.length > 5;
+            const isNumbered = /^[0-9](\.-|\.)|^(a|b|c|f)\)/i.test(para);
+            
+            if (isTitle) {
+                return `<h2 class="full-content-title">${para}</h2>`;
+            } else if (isNumbered) {
+                return `<h3 class="full-content-subtitle">${para}</h3>`;
+            } else {
+                return `<p class="full-content-text">${para.replace(/\n/g, '<br>')}</p>`;
+            }
+        }).join('');
+
+        this.ui.modalContent.innerHTML = `
+            <div class="modal-header">
+                <span class="protocol-badge">Documento Oficial</span>
+                <h1>${data.titulo}</h1>
             </div>
-        </div>
-    `;
+            <div class="modal-body">
+                <div class="full-content-wrapper">
+                    ${contentHtml}
+                </div>
+            </div>
+        `;
+    },
 
-    modalContent.innerHTML = html;
-    modalOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; 
-    modalOverlay.scrollTop = 0;
-}
+    showErrorMessage() {
+        alert('Lo sentimos, no pudimos cargar los protocolos. Por favor, intenta refrescar la página.');
+    }
+};
 
-function closeModal() {
-    modalOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-document.getElementById('btn-telefonos').addEventListener('click', () => openModal('telefonos'));
-document.getElementById('btn-camaras').addEventListener('click', () => openModal('camaras'));
-modalClose.addEventListener('click', closeModal);
-modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) closeModal();
-});
-
-loadData();
+// Start application
+document.addEventListener('DOMContentLoaded', () => ProtocolApp.init());

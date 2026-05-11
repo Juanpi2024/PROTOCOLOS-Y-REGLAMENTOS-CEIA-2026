@@ -3,50 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolos Institucionales | CEIA Juanita Zúñiga Fuentes</title>
-    <meta name="description" content="Visualización interactiva de protocolos institucionales sobre uso de dispositivos móviles y televigilancia.">
+    <title>CEIA Juanita Zúñiga - Protocolos y Reglamentos 2026</title>
+    <meta name="description" content="Portal oficial de protocolos y reglamentos del CEIA Juanita Zúñiga Fuentes. Información para toda la comunidad educativa.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="app">
-        <main class="landing-page">
-            <header class="landing-header">
-                <div class="logo">CEIA Juanita Zúñiga</div>
-                <h1>Protocolos y Reglamentos 2026</h1>
-                <p>Información oficial y normativa para toda la comunidad educativa.</p>
-            </header>
 
-            <div class="protocol-grid">
-                <div class="protocol-card" id="btn-telefonos">
-                    <div class="card-icon">📱</div>
-                    <h2>Uso de Dispositivos Móviles</h2>
-                    <p>Regulación sobre celulares y dispositivos electrónicos según Ley 21.801.</p>
-                    <button class="btn-open">Ver Protocolo</button>
+    <main class="hero">
+        <span class="institution-name">CEIA Juanita Zúñiga Fuentes</span>
+        <h1>Protocolos y Reglamentos <span style="color: var(--primary);">2026</span></h1>
+        <p>Información oficial, normativa y procedimientos para asegurar una convivencia escolar sana y un entorno de aprendizaje seguro.</p>
+
+        <section class="protocol-grid">
+            <!-- Dispositivos Móviles -->
+            <article class="protocol-card" id="btn-telefonos">
+                <div class="icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/186/186239.png" alt="Celular">
                 </div>
+                <h2>Uso de Dispositivos</h2>
+                <p>Regulación sobre celulares y dispositivos electrónicos según Ley 21.801.</p>
+                <button class="btn-premium">Ver Protocolo</button>
+            </article>
 
-                <div class="protocol-card" id="btn-camaras">
-                    <div class="card-icon">📷</div>
-                    <h2>Cámaras de Televigilancia</h2>
-                    <p>Normativa sobre seguridad, privacidad y resguardo de grabaciones.</p>
-                    <button class="btn-open">Ver Protocolo</button>
+            <!-- Cámaras de Seguridad -->
+            <article class="protocol-card" id="btn-camaras">
+                <div class="icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3062/3062081.png" alt="Cámaras">
                 </div>
-            </div>
+                <h2>Cámaras de Vigilancia</h2>
+                <p>Normativa de uso, privacidad y seguridad de registros audiovisuales.</p>
+                <button class="btn-premium">Ver Protocolo</button>
+            </article>
+        </section>
+    </main>
 
-            <footer class="landing-footer">
-                Ley 21.801 & Ley 19.628 | © 2026 Juan Pablo Estrategias
-            </footer>
-        </main>
-
-        <!-- Modal Structure -->
-        <div id="modal-overlay" class="modal-overlay">
-            <div class="modal-container">
-                <button class="modal-close" id="modal-close">&times;</button>
-                <div class="modal-content" id="modal-content">
-                    <!-- Dynamic content will be injected here -->
-                </div>
-            </div>
+    <!-- Global Modal System -->
+    <div id="modal-overlay" aria-hidden="true" role="dialog">
+        <div class="modal-window">
+            <button id="modal-close" class="modal-close-btn" aria-label="Cerrar modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            
+            <!-- Dynamic Content Container -->
+            <div id="modal-content"></div>
         </div>
     </div>
-    <script type="module" src="./main.js"></script>
+
+    <!-- Scripts -->
+    <script src="./main.js" type="module"></script>
 </body>
 </html>
