@@ -1,66 +1,128 @@
 {
   "protocolo_telefonos": {
     "titulo": "PROTOCOLO: PROHIBIR Y REGULAR EL USO DE DISPOSITIVOS MÓVILES ELECTRÓNICOS DE COMUNICACIÓN PERSONAL EN ESTABLECIMIENTOS EDUCACIONALES. LEY 21.801.",
-    "introduccion": "El uso de dispositivos móviles en el contexto educativo ha generado diversos impactos en los procesos de enseñanza y aprendizaje, la convivencia escolar y el bienestar socioemocional de los estudiantes. En este marco, la normativa educacional vigente establece la prohibición del uso de dispositivos móviles en establecimientos educacionales, resguardando el desarrollo integral de los estudiantes y promoviendo entornos educativos favorables para el aprendizaje, la interacción social y la convivencia.",
-    "marco_legal": "Ley N° 21.801, que regula Artículo 10 bis.- Prohíbase el uso de dispositivos móviles electrónicos de comunicación personal, en adelante \"dispositivos móviles\", en los establecimientos educacionales que imparten niveles de educación parvularia, básica o media.",
-    "objetivo": "Regular el uso de teléfonos móviles y otros dispositivos electrónicos de comunicación dentro del CEIA Juanita Zúñiga Fuentes, asegurando condiciones adecuadas para el aprendizaje, la seguridad, la convivencia escolar y la protección de la privacidad de todos los integrantes de la comunidad educativa.",
-    "alcance": "Este protocolo aplica a estudiantes, apoderados, docentes, asistentes de la educación, equipo directivo.",
-    "fundamentacion": "El uso excesivo o inapropiado de dispositivos móviles puede generar riesgos en el desarrollo cognitivo, afectivo, social y físico de niños, niñas y jóvenes. Se entenderá por “uso” toda interacción, manipulación o empleo del dispositivo móvil en el contexto educativo. La prohibición se vincula estrictamente al “uso” y no al porte.",
-    "excepciones": [
+    "secciones": [
       {
-        "id": "a",
-        "titulo": "Apoyos vinculados a Necesidades Educativas Especiales (NEE)",
-        "descripcion": "Debidamente acreditados por profesional competente. Requiere certificado que acredite el uso adecuado como ayuda técnica."
+        "titulo": "INTRODUCCIÓN",
+        "contenido": "El uso de dispositivos móviles en el contexto educativo ha generado diversos impactos en los procesos de enseñanza y aprendizaje, la convivencia escolar y el bienestar socioemocional de los estudiantes. El presente protocolo tiene por finalidad establecer procedimientos de actuación, medidas preventivas, formativas y de resguardo."
       },
       {
-        "id": "b",
-        "titulo": "Condición de salud",
-        "descripcion": "Requiere monitoreo o uso específico de aplicaciones médicas, acreditada por certificación médica."
+        "titulo": "MARCO NORMATIVO LEGAL",
+        "contenido": "El presente protocolo se fundamenta en la Ley N° 21.801, que regula Artículo 10 bis.- Prohíbase el uso de dispositivos móviles electrónicos de comunicación personal en establecimientos educacionales que imparten niveles de educación parvularia, básica o media. Se consideran dispositivos móviles: Teléfonos, Tablet, smartwatch y dispositivos similares."
       },
       {
-        "id": "c",
-        "titulo": "Uso pedagógico autorizado",
-        "descripcion": "Para actividades curriculares, evaluativas o formativas específicas, contempladas en la planificación de la clase visada por UTP."
+        "titulo": "1. OBJETIVO",
+        "contenido": "Regular el uso de teléfonos móviles y otros dispositivos electrónicos de comunicación dentro del CEIA Juanita Zúñiga Fuentes, asegurando condiciones adecuadas para el aprendizaje, la seguridad, la convivencia escolar y la protección de la privacidad."
       },
       {
-        "id": "f",
-        "titulo": "Emergencias y/o situaciones de seguridad",
-        "descripcion": "Evaluadas por equipo directivo conforme a procedimiento."
+        "titulo": "2. ALCANCE",
+        "contenido": "Este protocolo aplica a estudiantes, apoderados, docentes, asistentes de la educación y equipo directivo."
+      },
+      {
+        "titulo": "3. FUNDAMENTACIÓN",
+        "contenido": "El uso excesivo o inapropiado de dispositivos móviles puede generar riesgos en el desarrollo cognitivo, afectivo, social y físico. Se entenderá por “uso” toda interacción, manipulación o empleo del dispositivo móvil. La prohibición se aplica especialmente durante actividades curriculares, salvo excepciones:"
+      },
+      {
+        "titulo": "3.a) Apoyos vinculados a NEE",
+        "contenido": "Debidamente acreditados por profesional competente. La autorización debe contener indicaciones del certificado, descripción del uso como ayuda técnica, responsables y período de vigencia."
+      },
+      {
+        "titulo": "3.b) Condición de salud",
+        "contenido": "Requiere monitoreo o uso de aplicaciones médicas, acreditada por certificación médica que detalle diagnóstico y necesidad de uso periódico."
+      },
+      {
+        "titulo": "3.c) Uso pedagógico autorizado",
+        "contenido": "Para actividades curriculares, evaluativas o formativas específicas, contempladas en la planificación de la clase y visada por UTP."
+      },
+      {
+        "titulo": "3.f) Emergencias y/o situaciones de seguridad",
+        "contenido": "Evaluadas por equipo directivo. La solicitud debe constar por escrito en un documento firmado por la dirección y registrado formalmente."
+      },
+      {
+        "titulo": "ESTRATEGIAS PREVENTIVAS",
+        "contenido": "Implementación de trabajo formativo sobre riesgos de uso inadecuado y promoción de actividades recreativas que favorezcan la interacción social."
+      },
+      {
+        "titulo": "4. IMPLEMENTACIÓN DE MEDIDAS",
+        "contenido": "Se realizará de manera progresiva y gradual:"
+      },
+      {
+        "titulo": "4.1. Primera Falta",
+        "contenido": "Registro en hoja de vida, Diálogo reflexivo por parte del profesor, estudiante y/o apoderado."
+      },
+      {
+        "titulo": "4.2. Segunda Falta",
+        "contenido": "Registro en hoja de vida, Citación apoderado, entrevista con Inspectoría general."
+      },
+      {
+        "titulo": "4.3. Tercera Falta",
+        "contenido": "Registro en hoja de vida, Suspensión gradual (1°, 2° y 3° suspensión de 1 a 3 días). Se considera falta grave."
+      },
+      {
+        "titulo": "4.4. Faltas Gravísimas",
+        "contenido": "Difusión de registro para humillar/acosar, vulneración de intimidad, conductas delictivas o daño significativo a la convivencia."
+      },
+      {
+        "titulo": "5. PROCEDIMIENTO PARA ESTUDIANTES",
+        "contenido": "El docente solicitará guardar el dispositivo. Si no acata, se registra como falta leve. Inspectoría orientará al estudiante y evaluará derivación a convivencia."
+      },
+      {
+        "titulo": "6. ESPACIOS DE RESGUARDO",
+        "contenido": "El establecimiento dispondrá de un espacio de resguardo en Inspectoría General para propiciar un ambiente seguro."
+      },
+      {
+        "titulo": "7. HORARIOS Y ESPACIOS COMUNES",
+        "contenido": "Se permite el uso en patios solo en horarios de recreo. Mañana: 10:00-10:15 / 11:40-11:45. Tarde: 15:30-15:45 / 17:10-17:15. Vespertina: 20:30-20:40 / 22:10-22:15."
+      },
+      {
+        "titulo": "8. PROCEDIMIENTO PARA FUNCIONARIOS",
+        "contenido": "Docentes y asistentes tienen prohibido el uso durante jornada de clases/laboral, salvo funciones requeridas o excepciones pedagógicas, sujetos al Reglamento de Orden e Higiene."
       }
-    ],
-    "medidas_disciplinarias": [
-      {
-        "falta": "1° Falta",
-        "acciones": "Registro en hoja de vida, Diálogo reflexivo por parte del profesor, estudiante (mayor de edad) y/o apoderado."
-      },
-      {
-        "falta": "2° Falta",
-        "acciones": "Registro en hoja de vida, Citación apoderado, entrevista con Inspectoría general."
-      },
-      {
-        "falta": "3° Falta",
-        "acciones": "Registro en hoja de vida, Suspensión de 1 a 3 días (gradual: 1 día, 2 días, 3 días - Falta grave)."
-      }
-    ],
-    "faltas_gravisimas": "Cualquier difusión de registro para humillar/acosar; vulneración grave de intimidad; conductas que pudieran constituir delito; daño significativo a la convivencia.",
-    "horarios_permitidos": {
-      "mañana": ["10:00 - 10:15", "11:40 - 11:45"],
-      "tarde": ["15:30 - 15:45", "17:10 - 17:15"],
-      "vespertina": ["20:30 - 20:40", "22:10 - 22:15"]
-    }
+    ]
   },
   "protocolo_camaras": {
     "titulo": "PROTOCOLO DE USO DE CÁMARAS DE TELEVIGILANCIA",
-    "objetivo": "Regular la instalación, uso, acceso y resguardo de las cámaras de tele vigilancia, asegurando un uso legal, proporcional y exclusivo para fines de seguridad.",
-    "introduccion": "El CEIA Juanita Zúñiga Fuentes implementa un sistema de cámaras de tele vigilancia con la finalidad de fortalecer la seguridad de la comunidad educativa, prevenir situaciones de violencia, resguardar la infraestructura y apoyar la gestión de la convivencia escolar.",
-    "marco_legal": "Ley N° 19.628 sobre Protección de la Vida Privada, Código del Trabajo (art 5°), Ley N° 20.370 (LGE), Ley de Convivencia, Buen Trato y Bienestar.",
-    "ubicaciones_autorizadas": ["Entrada del establecimiento", "Hall de acceso", "Pasillo ala norte y sur", "Patio posterior gimnasio techado"],
-    "prohibiciones_ubicacion": ["Baños", "Camarines", "Oficinas privadas", "Espacios internos que vulneren la privacidad"],
-    "custodia": {
-      "responsables": ["Director Juan José Araya Chandía", "María de los Ángeles Canales (Diurna)", "Matías Batarce Hernández (Vespertina)"],
-      "almacenamiento": "30 días corridos (prorrogable en caso de investigación)"
-    },
-    "restricciones_uso": ["No difundir grabaciones", "No publicar en redes sociales", "No usar para control laboral"],
-    "procedimiento_solicitud": "Solicitud formal al director(a) quien evaluará la pertinencia."
+    "secciones": [
+      {
+        "titulo": "INTRODUCCIÓN Y MARCO LEGAL",
+        "contenido": "Finalidad: fortalecer seguridad, prevenir violencia y resguardar infraestructura. Basado en Ley 19.628, Código del Trabajo, Orientaciones de la Superintendencia de Educación y Ley 20.370."
+      },
+      {
+        "titulo": "1. UBICACIÓN DE CÁMARAS",
+        "contenido": "Espacios comunes: entrada, Hall de acceso, pasillos ala norte y sur, patio posterior gimnasio techado."
+      },
+      {
+        "titulo": "2. PROHIBICIONES DE INSTALACIÓN",
+        "contenido": "Estrictamente prohibido en baños, camarines, oficinas privadas y espacios que vulneren la privacidad."
+      },
+      {
+        "titulo": "3. CUSTODIA Y CONFIDENCIALIDAD",
+        "contenido": "Administrados exclusivamente por Dirección. Plazo ordinario de almacenamiento: 30 días corridos (prorrogable por investigación)."
+      },
+      {
+        "titulo": "4. ACCESO A ORGANISMOS",
+        "contenido": "Entrega solo a organismos facultados (Ministerio Público, Tribunales, Policías, Contraloría, Superintendencia) previa solicitud formal."
+      },
+      {
+        "titulo": "5. RESTRICCIONES DE USO",
+        "contenido": "Prohibido difundir grabaciones, publicar en redes sociales o usar material para control laboral."
+      },
+      {
+        "titulo": "6. REGISTRO DE REVISIÓN",
+        "contenido": "Toda revisión debe quedar en Acta de Revisión de Grabaciones. Solicitud formal obligatoria al Director(a)."
+      },
+      {
+        "titulo": "7. ALMACENAMIENTO AUTOMÁTICO",
+        "contenido": "El sistema elimina registros automáticamente después de 30 días."
+      },
+      {
+        "titulo": "8. INFORMACIÓN A LA COMUNIDAD",
+        "contenido": "Instalación informada a todos e indicación mediante señalética visible."
+      },
+      {
+        "titulo": "9. SANCIONES POR USO INDEBIDO",
+        "contenido": "Considerado falta grave, implicando sanciones administrativas, disciplinarias y responsabilidad legal."
+      }
+    ]
   }
 }
