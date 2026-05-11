@@ -1,6 +1,6 @@
 /**
  * CEIA Juanita Zúñiga - Protocol Management System
- * Bug Fix: Section parsing and dashboard organization
+ * UX Refinement: Dashboard Cards (Summary vs Detail)
  */
 
 const ProtocolApp = {
@@ -71,17 +71,26 @@ const ProtocolApp = {
 
         this.ui.modalContent.innerHTML = `
             <div class="modal-header">
-                <span class="protocol-badge">Menú de Secciones</span>
+                <span class="protocol-badge">Menú Principal de Secciones</span>
                 <h1>${data.titulo}</h1>
             </div>
             <div class="modal-body">
                 <div class="section-grid">
-                    ${sections.map((sec, index) => `
+                    ${sections.map((sec, index) => {
+                        // Create a concise preview
+                        const preview = sec.title.length > 80 
+                            ? sec.title.substring(0, 80) + '...' 
+                            : sec.title;
+                        
+                        return `
                         <div class="section-tile" onclick="ProtocolApp.renderDetail(${index})">
-                            <h3>${sec.title}</h3>
-                            <div class="tile-footer">Ver contenido completo →</div>
+                            <div class="tile-header-area">
+                                <h3>${preview}</h3>
+                                <p class="tile-preview-text">${sec.content[0] ? sec.content[0].substring(0, 60) + '...' : 'Ver detalles de la sección'}</p>
+                            </div>
+                            <div class="tile-footer">Profundizar sección →</div>
                         </div>
-                    `).join('')}
+                    `}).join('')}
                 </div>
             </div>
         `;
@@ -116,10 +125,6 @@ const ProtocolApp = {
         let introSection = { title: 'INTRODUCCIÓN Y MARCO GENERAL', content: [] };
         let currentSection = null;
 
-        // Pattern for section detection:
-        // 1. All caps titles (at least 4 chars)
-        // 2. Numbered points (1., 1.-, 1.1., 1.1, 4.1. etc.)
-        // 3. Lettered points (a), b), etc.)
         const titleRegex = /^[A-ZÁÉÍÓÚÑ\s]{4,}(\.|$)/;
         const numberRegex = /^[0-9]+(\.[0-9]+)*(\.|\.-|\s|$)/;
         const letterRegex = /^[a-z]\)/i;
@@ -144,11 +149,7 @@ const ProtocolApp = {
         });
 
         if (currentSection) sections.push(currentSection);
-        
-        // Add intro at start if it has text
-        if (introSection.content.length > 0) {
-            sections.unshift(introSection);
-        }
+        if (introSection.content.length > 0) sections.unshift(introSection);
         
         return sections;
     }
