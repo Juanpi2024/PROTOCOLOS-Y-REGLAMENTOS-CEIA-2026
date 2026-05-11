@@ -20,25 +20,32 @@ function openModal(key) {
     
     let html = `
         <div class="header">
-            <div class="badge">Protocolo Oficial CEIA 2026</div>
+            <div class="badge">Copia Fiel y Oficial CEIA 2026</div>
             <h1>${data.titulo}</h1>
         </div>
 
         <div class="modal-body-scroll">
-            ${data.secciones.map(sec => `
-                <section class="section-card">
-                    <h2 class="section-title">${sec.titulo}</h2>
-                    <p class="content-text">${sec.contenido}</p>
-                </section>
-            `).join('')}
+            <div class="full-content-wrapper">
+                ${data.contenido_completo.map(para => {
+                    // Detect if it looks like a title/subtitle (all caps or numbered)
+                    const isTitle = para === para.toUpperCase() && para.length > 5;
+                    const isNumbered = /^[0-9](\.-|\.)|^(a|b|c|f)\)/i.test(para);
+                    
+                    if (isTitle) {
+                        return `<h2 class="full-content-title">${para}</h2>`;
+                    } else if (isNumbered) {
+                        return `<h3 class="full-content-subtitle">${para}</h3>`;
+                    } else {
+                        return `<p class="full-content-text">${para.replace(/\n/g, '<br>')}</p>`;
+                    }
+                }).join('')}
+            </div>
         </div>
     `;
 
     modalContent.innerHTML = html;
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden'; 
-    
-    // Smooth scroll to top of modal
     modalOverlay.scrollTop = 0;
 }
 

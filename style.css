@@ -269,7 +269,40 @@ body {
 ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
+/* Faithful Content Typography */
+.full-content-wrapper {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+}
+
+.full-content-title {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.full-content-subtitle {
+    font-size: 1.15rem;
+    color: var(--secondary);
+    margin: 1.5rem 0 0.8rem 0;
+    font-weight: 600;
+}
+
+.full-content-text {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
 @media (max-width: 768px) {
+    .full-content-text {
+        text-align: left;
+    }
   .landing-header h1 { font-size: 2.5rem; }
   .modal-content { padding: 1.5rem; }
 }
