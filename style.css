@@ -241,6 +241,13 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
+#modal-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
 .modal-body {
   padding: 2rem 3rem;
   overflow-y: auto;
