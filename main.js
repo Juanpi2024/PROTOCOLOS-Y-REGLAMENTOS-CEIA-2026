@@ -51,7 +51,7 @@ const ProtocolApp = {
         this.ui.modalOverlay.classList.add('active');
         this.ui.body.style.overflow = 'hidden';
         
-        this.renderDashboard();
+        this.renderProtocol();
     },
 
     closeModal() {
@@ -65,93 +65,45 @@ const ProtocolApp = {
         return this.state.data[key];
     },
 
-    renderDashboard() {
+    renderProtocol() {
         const data = this.getProtocolData();
-        const sections = this.processSections(data.contenido_completo);
+        const paragraphs = data.contenido_completo;
+
+        let htmlContent = '';
+
+        const titleRegex = /^[A-ZÁÉÍÓÚÑ\s]{4,}(\.|$|:)/;
+        const numberTitleRegex = /^[0-9]+(\.[0-9]+)*(\.|\.-|\s)/;
+        const letterRegex = /^[a-z]\)/i;
+        const dashRegex = /^-/;
+
+        paragraphs.forEach(para => {
+            // Unify lines that end up with \n explicitly if the json parses them
+            const textParts = para.split('\\n').join('<br>');
+
+            if (titleRegex.test(para) && para === para.toUpperCase() && para.length < 150) {
+                htmlContent += `<h2>${textParts}</h2>`;
+            } else if (numberTitleRegex.test(para)) {
+                htmlContent += `<h3>${textParts}</h3>`;
+            } else if (letterRegex.test(para) || dashRegex.test(para)) {
+                htmlContent += `<div class="indent-item">${textParts}</div>`;
+            } else {
+                htmlContent += `<p>${textParts}</p>`;
+            }
+        });
 
         this.ui.modalContent.innerHTML = `
             <div class="modal-header">
-                <span class="protocol-badge">Menú Principal de Secciones</span>
+                <span class="protocol-badge">Documento Oficial</span>
                 <h1>${data.titulo}</h1>
             </div>
-            <div class="modal-body">
-                <div class="section-grid">
-                    ${sections.map((sec, index) => {
-                        // Create a concise preview
-                        const preview = sec.title.length > 80 
-                            ? sec.title.substring(0, 80) + '...' 
-                            : sec.title;
-                        
-                        return `
-                        <div class="section-tile" onclick="ProtocolApp.renderDetail(${index})">
-                            <div class="tile-header-area">
-                                <h3>${preview}</h3>
-                                <p class="tile-preview-text">${sec.content[0] ? sec.content[0].substring(0, 60) + '...' : 'Ver detalles de la sección'}</p>
-                            </div>
-                            <div class="tile-footer">Profundizar sección →</div>
-                        </div>
-                    `}).join('')}
-                </div>
-            </div>
-        `;
-    },
-
-    renderDetail(index) {
-        const data = this.getProtocolData();
-        const sections = this.processSections(data.contenido_completo);
-        const section = sections[index];
-
-        this.ui.modalContent.innerHTML = `
-            <div class="modal-header">
-                <div class="detail-header">
-                    <button class="btn-back" onclick="ProtocolApp.renderDashboard()">
-                        ← Volver al Menú
-                    </button>
-                </div>
-                <h1>${section.title}</h1>
-            </div>
-            <div class="modal-body detail-view">
-                <div class="detail-content">
-                    <div class="detail-text">${section.content.join('\n\n')}</div>
+            <div class="modal-body document-view">
+                <div class="document-content">
+                    ${htmlContent}
                 </div>
             </div>
         `;
         
         this.ui.modalContent.querySelector('.modal-body').scrollTop = 0;
-    },
-
-    processSections(paragraphs) {
-        const sections = [];
-        let introSection = { title: 'INTRODUCCIÓN Y MARCO GENERAL', content: [] };
-        let currentSection = null;
-
-        const titleRegex = /^[A-ZÁÉÍÓÚÑ\s]{4,}(\.|$)/;
-        const numberRegex = /^[0-9]+(\.[0-9]+)*(\.|\.-|\s|$)/;
-        const letterRegex = /^[a-z]\)/i;
-
-        paragraphs.forEach(para => {
-            const isTitle = titleRegex.test(para);
-            const isPoint = numberRegex.test(para) || letterRegex.test(para);
-
-            if (isTitle || isPoint) {
-                if (currentSection) sections.push(currentSection);
-                currentSection = {
-                    title: para,
-                    content: []
-                };
-            } else {
-                if (currentSection) {
-                    currentSection.content.push(para);
-                } else {
-                    introSection.content.push(para);
-                }
-            }
-        });
-
-        if (currentSection) sections.push(currentSection);
-        if (introSection.content.length > 0) sections.unshift(introSection);
-        
-        return sections;
     }
 };
 
