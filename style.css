@@ -321,3 +321,30 @@ h1, h2, h3 {
   .document-content { padding: 1.5rem; }
   .document-content .indent-item { margin-left: 1rem; }
 }
+
+/* Table of Contents */
+.toc-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 0.3rem 0;
+  transition: var(--transition);
+}
+
+.toc-link:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+.toc-sublink {
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 1.5rem;
+  font-size: 0.9em;
+  padding: 0.2rem 0;
+}
+
+.toc-sublink:hover {
+  color: var(--primary);
+}

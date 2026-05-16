@@ -178,6 +178,8 @@ const ProtocolApp = {
         const hasExternalLink = !!data.url_externa;
 
         let htmlContent = '';
+        let tocHtml = '';
+        let indexCount = 0;
 
         const titleRegex = /^[A-ZÁÉÍÓÚÑ\s]{4,}(\.|$|:)/;
         const numberTitleRegex = /^[0-9]+(\.[0-9]+)*(\.|\.-|\s)/;
@@ -188,15 +190,32 @@ const ProtocolApp = {
             const sanitizedText = this.escapeHtml(para).replace(/\\n/g, '<br>');
 
             if (titleRegex.test(para) && para === para.toUpperCase() && para.length < 150) {
-                htmlContent += `<h2>${sanitizedText}</h2>`;
+                const id = `section-${indexCount++}`;
+                htmlContent += `<h2 id="${id}">${sanitizedText}</h2>`;
+                tocHtml += `<li><a href="#${id}" class="toc-link">${sanitizedText}</a></li>`;
             } else if (numberTitleRegex.test(para)) {
-                htmlContent += `<h3>${sanitizedText}</h3>`;
+                const id = `section-${indexCount++}`;
+                htmlContent += `<h3 id="${id}">${sanitizedText}</h3>`;
+                tocHtml += `<li><a href="#${id}" class="toc-link toc-sublink">${sanitizedText}</a></li>`;
             } else if (letterRegex.test(para) || dashRegex.test(para)) {
                 htmlContent += `<div class="indent-item">${sanitizedText}</div>`;
             } else if (para.trim()) {
                 htmlContent += `<p>${sanitizedText}</p>`;
             }
         });
+
+        // Add index section if there are headings
+        let tocContainerHtml = '';
+        if (tocHtml) {
+            tocContainerHtml = `
+                <div class="toc-container" style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid var(--secondary);">
+                    <h3 style="margin-top: 0; color: var(--text-dark);">Índice de Contenidos</h3>
+                    <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0; max-height: 250px; overflow-y: auto; font-size: 0.95rem;">
+                        ${tocHtml}
+                    </ul>
+                </div>
+            `;
+        }
 
         const externalLinkHtml = hasExternalLink ? `
             <div style="margin-top: 2rem; padding: 1.5rem; background: #f0f9ff; border-radius: 12px; border-left: 4px solid var(--primary);">
@@ -215,6 +234,7 @@ const ProtocolApp = {
             </div>
             <div class="modal-body document-view">
                 <div class="document-content">
+                    ${tocContainerHtml}
                     ${htmlContent}
                     ${externalLinkHtml}
                 </div>
@@ -222,6 +242,23 @@ const ProtocolApp = {
         `;
         
         this.ui.modalContent.querySelector('.modal-body').scrollTop = 0;
+
+        // Add smooth scrolling to TOC links
+        this.ui.modalContent.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const modalBody = this.ui.modalContent.querySelector('.modal-body');
+                
+                if (targetElement && modalBody) {
+                    modalBody.scrollTo({
+                        top: targetElement.offsetTop - 20, // Add a little padding
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     }
 };
 
