@@ -77,6 +77,7 @@ const ProtocolApp = {
     },
 
     escapeHtml(text) {
+        if (typeof text !== 'string') return '';
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
@@ -184,7 +185,6 @@ const ProtocolApp = {
         const dashRegex = /^-/;
 
         paragraphs.forEach(para => {
-            const textParts = para.split('\\n').join('<br>');
             const sanitizedText = this.escapeHtml(para).replace(/\\n/g, '<br>');
 
             if (titleRegex.test(para) && para === para.toUpperCase() && para.length < 150) {
