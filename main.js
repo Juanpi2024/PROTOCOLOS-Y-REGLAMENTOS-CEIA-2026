@@ -381,16 +381,17 @@ const ProtocolApp = {
             let isLi = false;
 
             // Check H2 major heading conditions
-            const isChapter = /^(CAPITULO|CAPÍTULO|ANEXO\s*\d*)/i.test(trimmed);
+            const isRomanHeading = /^\s*(I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII|XIV|XV|XVI|XVII|XVIII|XIX|XX)\b[\s\.\-:]+/.test(trimmed);
+            const isSectionHeading = /^\s*(TITULO|TÍTULO|CAPITULO|CAPÍTULO|ANEXO)\b/i.test(trimmed);
             const isKnownMajor = majorHeadings.some(h => trimmed.toUpperCase().includes(h));
             
-            if (isChapter || (isKnownMajor && trimmed === trimmed.toUpperCase() && trimmed.length < 120)) {
+            if (isRomanHeading || isSectionHeading || (isKnownMajor && trimmed === trimmed.toUpperCase() && trimmed.length < 120)) {
                 isH2 = true;
             } 
             // Check H3 subheading conditions
             else {
-                // Decimal numbering like 2.1.- or 6.2.-
-                const isDecimalNumber = /^\s*[0-9]+\.[0-9]+(\.[0-9]+)*(\.-|\.|\s)/.test(trimmed);
+                // Decimal numbering like 2.1- or 6.2.- or 4.1.3
+                const isDecimalNumber = /^\s*[0-9]+\.[0-9]+(\.[0-9]+)*[\s\.\-:\/]+/.test(trimmed);
                 // Numbered headings like 1. OBJETIVO. (short, uppercase)
                 const isNumberedHeading = /^\s*([0-9]+)\.\s+[A-ZÁÉÍÓÚÑ]/.test(trimmed) && trimmed === trimmed.toUpperCase() && trimmed.length < 90;
 
