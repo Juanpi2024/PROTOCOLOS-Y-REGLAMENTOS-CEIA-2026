@@ -135,7 +135,16 @@ const ProtocolApp = {
             // Search query filter
             if (query) {
                 const matchTitle = protocol.titulo.toLowerCase().includes(query);
-                const matchContent = protocol.contenido_completo.some(p => p.toLowerCase().includes(query));
+                const matchContent = protocol.contenido_completo.some(p => {
+                    if (typeof p === 'string') {
+                        return p.toLowerCase().includes(query);
+                    } else if (p && typeof p === 'object' && p.type === 'table') {
+                        const inHeaders = p.headers ? p.headers.some(h => h.toLowerCase().includes(query)) : false;
+                        const inRows = p.rows ? p.rows.some(row => row.some(cell => cell.toLowerCase().includes(query))) : false;
+                        return inHeaders || inRows;
+                    }
+                    return false;
+                });
                 return matchTitle || matchContent;
             }
             
@@ -333,6 +342,33 @@ const ProtocolApp = {
         ];
 
         paragraphs.forEach(para => {
+            if (para && typeof para === 'object' && para.type === 'table') {
+                let tableHtml = `<div class="table-container"><table class="premium-table">`;
+                if (para.headers && para.headers.length > 0) {
+                    tableHtml += `<thead><tr>`;
+                    para.headers.forEach(header => {
+                        tableHtml += `<th>${this.escapeHtml(header)}</th>`;
+                    });
+                    tableHtml += `</tr></thead>`;
+                }
+                if (para.rows && para.rows.length > 0) {
+                    tableHtml += `<tbody>`;
+                    para.rows.forEach(row => {
+                        tableHtml += `<tr>`;
+                        row.forEach(cell => {
+                            const cellHtml = this.escapeHtml(cell).replace(/\n/g, '<br>').replace(/\\n/g, '<br>');
+                            tableHtml += `<td>${cellHtml}</td>`;
+                        });
+                        tableHtml += `</tr>`;
+                    });
+                    tableHtml += `</tbody>`;
+                }
+                tableHtml += `</table></div>`;
+                htmlContent += tableHtml;
+                return;
+            }
+
+            if (typeof para !== 'string') return;
             const trimmed = para.trim();
             if (!trimmed) return;
 
