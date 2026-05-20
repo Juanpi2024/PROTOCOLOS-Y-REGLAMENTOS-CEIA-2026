@@ -1,42 +1,449 @@
 {
   "pei_institucional": {
-    "titulo": "PROYECTO EDUCATIVO INSTITUCIONAL (PEI) - CEIA JUANITA ZÚÑIGA FUENTES",
+    "titulo": "PROYECTO EDUCATIVO INSTITUCIONAL (PEI) 2022-2027",
     "tipo": "documento",
-    "url_externa": "https://wwwfs.mineduc.cl/Archivos/infoescuelas/documentos/3396/ProyectoEducativo3396.pdf",
     "icono": "https://cdn-icons-png.flaticon.com/512/3389/3389081.png",
     "contenido_completo": [
-      "PROYECTO EDUCATIVO INSTITUCIONAL (PEI).",
-      "El Proyecto Educativo Institucional (PEI) es el instrumento que orienta la gestión técnica pedagógica y administrativa de nuestra comunidad educativa. Define nuestra identidad, misión, visión y los sellos que nos distinguen como un Centro de Educación Integrada de Adultos comprometido con la formación integral de jóvenes y adultos.",
-      "VISIÓN INSTITUCIONAL",
-      "Ser un establecimiento educacional líder en la modalidad de educación de adultos, reconocido por su excelencia académica, inclusión social y compromiso con el desarrollo integral de todos sus estudiantes, contribuyendo activamente al progreso de la comuna de Parral.",
-      "MISIÓN",
-      "Proporcionar una educación de calidad a personas jóvenes y adultas, fomentando el desarrollo de competencias académicas, laborales y ciudadanas, en un ambiente inclusivo, respetuoso y colaborativo que promueva la equidad y la justicia social.",
-      "PRINCIPIOS Y VALORES INSTITUCIONALES",
-      "• Inclusión: Acogemos a todos los estudiantes sin discriminación, valorando la diversidad como fortaleza institucional.",
-      "• Respeto: Promovemos el trato digno entre todos los miembros de la comunidad educativa.",
-      "• Excelencia: Buscamos constantemente la mejora continua en nuestros procesos educativos.",
-      "• Responsabilidad: Fomentamos el compromiso individual y colectivo con el aprendizaje.",
-      "• Solidaridad: Desarrollamos acciones que beneficien a toda la comunidad educativa.",
-      "• Honestidad: Actuamos con transparencia e integridad en todas nuestras relaciones.",
-      "OBJETIVOS ESTRATÉGICOS",
-      "1. Mejorar los resultados de aprendizaje en todas las asignaturas del currículum nacional.",
-      "2. Fortalecer la retención escolar y disminuir la deserción estudiantil.",
-      "3. Desarrollar competencias digitales en estudiantes y docentes.",
-      "4. Promover la participación activa de las familias y la comunidad local.",
-      "5. Implementar prácticas pedagógicas innovadoras y contextualizadas.",
-      "6. Garantizar un clima escolar positivo y libre de violencia.",
-      "PERFIL DEL EGRESADO",
-      "Al finalizar sus estudios en el CEIA Juanita Zúñiga Fuentes, nuestros estudiantes habrán desarrollado competencias comunicativas, habilidades para el aprendizaje autónomo, conciencia crítica y capacidades para la inserción laboral.",
-      "LÍNEAS DE ACCIÓN PRIORITARIAS",
-      "1. GESTIÓN CURRICULAR: Implementación del currículum nacional adaptado.",
-      "2. CONVIVENCIA ESCOLAR: Prevención de la violencia y promoción del buen trato.",
-      "3. VINCULACIÓN CON EL MEDIO: Alianzas estratégicas con organizaciones locales.",
-      "4. DESARROLLO PROFESIONAL DOCENTE: Capacitación continua en andragogía.",
-      "5. INFRAESTRUCTURA Y RECURSOS: Mejora de espacios educativos.",
-      "VIGENCIA",
-      "Este PEI entra en vigencia el año 2026 y tendrá una duración de 4 años.",
-      "DOCUMENTO OFICIAL MINEDUC.",
-      "Para mayor detalle y revisión de la normativa completa, puede acceder al documento oficial cargado en el portal del Ministerio de Educación."
+      "PROYECTO EDUCATIVO INSTITUCIONAL (PEI) 2022-2027",
+      "Centro de Educación Integrada de Adultos \"Juanita Zúñiga Fuentes\" - Parral",
+      "\"Todos Nosotros Sabemos Algo. Todos nosotros ignoramos algo. Por eso, Aprendemos Siempre\" — Paulo Freire",
+      "I. PRESENTACIÓN",
+      "El Proyecto Educativo Institucional (PEI) tiene una relevancia fundamental en nuestra Unidad Educativa, en él se explicita cuáles son los sentidos y el sello que nos caracteriza y cuál es el aporte que realizamos al desarrollo de la comunidad Parralina. Por lo mismo, no es tan solo un instrumento de alto valor legal y educativo para nuestro sostenedor que es la Municipalidad de Parral, sino también para los jóvenes y adultos junto a sus familias que nos eligen como alternativa educacional.",
+      "Este PEI, además es un referente que permite proyectar y programar las acciones que aseguren una educación de calidad a través de otras herramientas como el Plan de Mejoramiento Educativo (PME). Este nuevo PEI ha perfeccionado su diseño y definiciones, fijando el rumbo de nuestro CEIA para los próximos años del periodo comprendido entre el 2022 al 2027. Ofrece a todos y todas los integrantes de la comunidad educativa un conjunto de fundamentos, objetivos y orientaciones para el trabajo pedagógico con los jóvenes y adultos estudiantes, que ven una nueva opción para completar sus estudios, continuar a niveles superiores y/o adquirir herramientas para el trabajo. Ha sido actualizado en términos de las mejores prácticas, tanto del nivel país como las locales pertinentes a nuestra Región Maulina, así como los avances de la investigación sobre el aprendizaje de la última década en adultos jóvenes.",
+      "También, ha sido concebido como apoyo necesario para la articulación de la recién promulgada Ley de Inclusión y de la Formación Ciudadana, en el marco de la Reforma Educacional, logrando así mejorar integral y colaborativamente la calidad de la educación: respetuosa de las necesidades educativas especiales, intereses y fortalezas de los y las personas jóvenes y adultas, y al mismo tiempo, potenciando su desarrollo y aprendizaje en una etapa decisiva de su vida.",
+      "Hemos recogido la invitación que nos ha hecho el MINEDUC, en forma participativa y colaborativa se ha reflexionado y concluido con la elaboración de este proyecto educativo que presenta los idearios y definiciones estratégicas de nuestro Centro de Educación Integrada de Adultos \"Juanita Zúñiga Fuentes\".",
+      "II. PALABRAS DE LA DIRECTORA DEL ESTABLECIMIENTO",
+      "En la última década hemos sido testigos de la convicción generalizada y sistemática de que la educación asume cada vez mayor relevancia en el desarrollo de Chile y sus capacidades competitivas, y como tal en la construcción de capital cultural y social en beneficio del país, las comunidades, las familias y las personas.",
+      "En base a lo anterior, nuestro propósito como institución es realizar una contribución concreta para la construcción de una sociedad más justa, integrada, inclusiva y solidaria. Para ello, tenemos una trayectoria y nos hemos propuesto ampliar nuestro proyecto educativo y sus impactos, convencidos de que la educación representa un instrumento significativo de desarrollo y de importancia para la formación de jóvenes y adultos; \"es una aspiración y una urgencia en el mundo fragmentado que vivimos\".",
+      "El presente documento es parte de esa aspiración, pero también encierra un sueño, el que nos permitirá desarrollar de mejor manera nuestros esfuerzos diarios de entregar una formación integral en la labor educativa que nos hemos propuesto realizar. Y es que en esta comunidad educativa convivimos un grupo de personas que siente pasión por la educación, la formación para la vida y también para el trabajo, inspirados por el sueño de generar cambios profundos a la comunidad en la que estamos insertos; somos una opción cierta para ello.",
+      "Este Proyecto Educativo comienza por un preámbulo que contextualiza la experiencia, la tradición y la historia. Continúa con el reconocimiento y valoración de la identidad a partir de nuestras fuentes y propias experiencias, lo que se traduce en una reflexión colectiva sobre el ideario institucional con nuestra visión de la persona y de la sociedad, formulando nuestra misión, perfil del estudiante y los valores compartidos por la comunidad. El documento continúa exponiendo la gestión del proyecto educativo que buscamos practicar en nuestro CEIA, siempre en continuo diálogo con la comunidad, proponiendo así un modelo de gestión educacional que contenga y sostenga todo lo anterior para lograr los resultados educativos a los que aspiramos, lo que implica una evaluación permanente y un mejoramiento continuo.",
+      "Este proyecto educativo se dirige y compromete a todos quienes forman parte de nuestra comunidad educativa. También es en sí un documento para el diálogo y el estudio, incentivando el compromiso integral de la comunidad educativa. Nos hacemos responsables de lo que proclamamos, ello es un imperativo de credibilidad y una garantía de mejor servicio, dado que éste no es sólo un compromiso, sino que un sueño posible.",
+      "Rosicler Paulina Urra Espinosa",
+      "Directora del CEIA Escuela Juanita Zúñiga Fuentes",
+      "III. IDENTIFICACIÓN DEL CEIA",
+      "3.1 Antecedentes del Establecimiento",
+      "A continuación se detallan los antecedentes institucionales y de identificación de nuestro establecimiento educacional:",
+      {
+        "type": "table",
+        "headers": [
+          "Identificación",
+          "Antecedentes del Establecimiento"
+        ],
+        "rows": [
+          [
+            "Nombre del Establecimiento",
+            "CEIA Juanita Zúñiga Fuentes"
+          ],
+          [
+            "RBD",
+            "3396-0"
+          ],
+          [
+            "Dirección",
+            "Igualdad 584, Parral"
+          ],
+          [
+            "Teléfono",
+            "942383219"
+          ],
+          [
+            "E-mail de contacto",
+            "ceia.juanitazuniga@daemparral.cl"
+          ],
+          [
+            "Sostenedor",
+            "Ilustre Municipalidad de Parral"
+          ],
+          [
+            "Dependencia",
+            "Municipal"
+          ],
+          [
+            "Modalidad",
+            "Regular (Adultos)"
+          ],
+          [
+            "Educación Básica Adultos",
+            "3º Nivel Básico (7º y 8º Básico) con Oficios"
+          ],
+          [
+            "Educación Media HC Adultos",
+            "1º Ciclo Medio (1º y 2º Medio)<br>2º Ciclo Medio (3º y 4º Medio)"
+          ],
+          [
+            "Educación Media TP Adultos",
+            "Especialidad Industrial: Electricidad<br>Especialidad Técnica: Atención de Párvulos"
+          ]
+        ]
+      },
+      "3.2 Equipo Directivo",
+      "El equipo de gestión y directivo del establecimiento está conformado por los siguientes profesionales:",
+      {
+        "type": "table",
+        "headers": [
+          "Nombre",
+          "Cargo / Función"
+        ],
+        "rows": [
+          [
+            "Rosicler Paulina Urra Espinosa",
+            "Directora"
+          ],
+          [
+            "María Angélica Moya Arroyo",
+            "Jefa de Unidad Técnica Pedagógica (UTP)"
+          ],
+          [
+            "Miguel Espinoza Muñoz",
+            "Inspector General Jornada Diurna"
+          ],
+          [
+            "Waldo Hernández Cancino",
+            "Inspector General Jornada Vespertina"
+          ]
+        ]
+      },
+      "3.3 Centro de Alumnos",
+      "Los docentes asesores que acompañan y apoyan el desarrollo de la organización estudiantil son:",
+      {
+        "type": "table",
+        "headers": [
+          "Nombre del Docente",
+          "Cargo / Función"
+        ],
+        "rows": [
+          [
+            "Pablo Palma Contreras",
+            "Profesor Asesor"
+          ],
+          [
+            "Omar Alvial Saldias",
+            "Profesor Asesor"
+          ]
+        ]
+      },
+      "3.4 Antecedentes Históricos del CEIA",
+      "El Centro de Educación Integrada de Adultos Juanita Zúñiga Fuentes, se inicia en el año 1928 gracias a la donación de una distinguida dama parralina, la Sra. Antonia Urrutia de Arce, quién entregó un inmueble para ser destinado a Centro de Estudios Vocacionales y de continuación para niñas de escasos recursos. De este modo, llegó a fundarse la Escuela Vocacional en el gobierno del General Carlos Ibáñez del Campo, siendo su primera Directora la Sra. Juanita Zúñiga Fuentes; cuyo nombre identifica hoy a nuestro plantel.",
+      "En el año 1966, la reforma educacional del mismo año dejó a esta institución como taller exploratorio para la atención de estudiantes preferentemente del área urbana y que habiendo hecho abandono de las diferentes escuelas anhelasen terminar su séptimo y octavo año básico. Ya en el año 1973, por orden de la Dirección de Educación, el establecimiento se convierte en Escuela Básica, ofreciendo cursos de primero a sexto año básico.",
+      "El 25 de Agosto de 1977, por Decreto Exento Nº640, a este establecimiento se le otorga la calidad de Escuela Especial de Adultos, contando con talleres propios de la Enseñanza Técnica y que en ese tiempo concretaba el sueño de muchas mujeres jóvenes que anhelaban adquirir las destrezas necesarias para incorporarse al mundo del trabajo con un oficio noble y valedero que le permitiera avanzar por los caminos difíciles de la vida, pero que ellas sabrían sortear con fe y alegría.",
+      "A contar de Enero de 1983, este establecimiento se transformó en Escuela de Adultos, conservando los cursos técnicos y evitando así la extinción de esta importante modalidad educativa que había sido de gran importancia para el plantel.",
+      "En el año 1985 por iniciativa de las autoridades comunales de ese entonces y personal que laboraba en este establecimiento, esta unidad educativa se transforma en un Centro de Educación Integrado de Adultos, siendo el primero en el ámbito regional que, junto con entregar Educación formal, otorgaba capacitación de tipo Técnico- Laboral; permitiéndole al estudiantado obtener mayores expectativas y una mejor integración a la vida activa de la comunidad de la cual formaba parte.",
+      "En 1993 este establecimiento se incorpora a la modalidad ya existente en el Decreto 12, permitiendo impartir dos cursos de Enseñanza Media en un año, gracias a lo cual han sido muchos los parralinos que han podido proseguir sus estudios y han visto coronados de esta forma sus anhelos de terminar su Enseñanza Media. Es así como actualmente este Centro de Educación Integrado de Adultos ofrece a la comunidad de Parral y sus alrededores la posibilidad de cursar sus estudios básicos de 7º y 8º, y continuar con enseñanza media Científico Humanista o Técnico Profesional.",
+      "Finalmente, a partir del año 1998 se incorpora el Decreto 152 que aprueba el plan de estudios mínimos de la Educación Media de Adultos en su modalidad Técnico Profesional, que espera dar una respuesta concreta a las legítimas aspiraciones y exigencias de jóvenes y adultos, de hacer efectiva la igualdad de oportunidades para responder profesionalmente a las demandas sociales, laborales y personales. En definitiva, es importante poner en relieve que el concepto de educación para personas jóvenes y adultas cumpla, no sólo la simple formación académica, sino que además con las diferentes problemáticas relativas al desarrollo personal, de actitudes, como así mismo la internalización de valores que permitan ejercer creativamente el rol y papel en la sociedad.",
+      "Durante el año 2014 se implementa el programa de integración escolar PIE, con la finalidad de brindar una educación inclusiva y contribuir al mejoramiento continuo a la calidad de la educación que se imparte en el establecimiento. Atendiendo a cada uno de los y las estudiantes especialmente a aquellos que presentan necesidades educativas específicas (NEE), sean estas de carácter permanente o transitorio. A través del PIE se ponen a disposición recursos humanos y materiales adicionales para proporcionar apoyos y equiparar oportunidades de aprendizajes y participación para todos los y las estudiantes que lo requieran.",
+      "Durante el año 2015 se incorpora la modalidad flexible y el programa +capaz, con la finalidad de ofrecer una educación gratuita de carácter semi-presencial que se caracteriza por ajustarse a las necesidades de los y las estudiantes, ofreciendo diversos horarios y frecuencias de las clases, adaptándose de esta manera a la disponibilidad de tiempo de las personas, jóvenes y adultos que quisieran completar sus estudios. Ambas incorporaciones fueron finalizadas, el programa +capaz en el año 2016 y modalidad flexible en el año 2018.",
+      "Nuestro establecimiento desde el año 2018 se encuentra adscrito al proyecto SAT (Sistema de Alerta Temprana), el cual se renueva anualmente. Este proyecto, que desde el año 2021 se transformó en SAAT, es definido por la propia Coordinación Nacional en EPJA como un \"Sistema de Alerta y Acompañamiento Temprano (SAAT) en EPJA que establece un conjunto de procedimientos que permiten obtener y monitorear información para la toma de decisiones y posibilitar el despliegue de factores protectores para prever de forma oportuna que las y los estudiantes abandonen sus trayectorias educativas, teniendo a la base principios, enfoques y un modelo que orienta a las instituciones hacia una cultura de la prevención con perspectiva de mejora continua.\"",
+      "La inmigración en Chile se ha convertido en un fenómeno de mucha relevancia que afecta a gran parte del territorio nacional, Parral no ha estado ajeno a ello; por lo cual durante el año 2018 nuestro establecimiento abre sus puertas recibiendo a 40 estudiantes de origen haitiano, brindándoles una oportunidad de regularizar sus estudios. Actualmente tenemos 4 estudiantes extranjeros (03 haitianos y 01 venezolano).",
+      "IV. IDEARIO INSTITUCIONAL",
+      "4.1 Nuestra Visión",
+      "“Centro Educacional Publico que aspira a desarrollar un proyecto educativo para jóvenes y adultos, inclusivo y sustentable, que respeta y valora la diversidad, entregándoles una formación que les permita adquirir un espíritu crítico, un sentido democrático y una perspectiva de ciudadano responsable para aportar a la sociedad y acceder a una mejor calidad de vida”.",
+      "4.2 Nuestra Misión",
+      "“Nuestro Centro Educacional Público se orienta a alcanzar la integración social, con énfasis en una base ética que complemente sus capacidades y desarrollo de conocimientos, habilidades, competencias, creatividad, capacidad de logro y de trabajo en equipo, en un ambiente culturalmente diverso, inclusivo que les facilite enfrentar los desafíos de la realidad nacional y del mundo globalizado y el cambio permanente de los diferentes procesos de su propio desarrollo humano”.",
+      "4.3 Nuestros Sellos Educativos",
+      "Los Sellos Educativos del CEIA Juanita Zúñiga Fuentes son aspectos que están directamente alineados con el Proyecto Educativo del establecimiento, estos tienen como propósitos dos principios y valores orientadores transversales, como lo son:",
+      "• La formación para la vida.",
+      "• La formación para el trabajo.",
+      "Ello significa en consecuencia que, junto a nuestra Visión, el CEIA aspira que nuestros egresados puedan desenvolverse en este mundo cada vez más complejo con una serie de actitudes, conocimientos y habilidades psicosociales, interpersonales y prácticas.",
+      "4.4 Perfil de los y las Estudiantes",
+      "Tomando en cuenta los objetivos generales y los requisitos mínimos de egreso que deben cumplir nuestros estudiantes, consideramos:",
+      "• En el contexto de la discusión actual, asociada a levantar una Reforma Educacional que debiese considerar las exigencias que emanen de la igualdad de oportunidades, somos consistentes con los desafíos que se le asignan a este nivel educacional, esto es dejar habilitado al alumno para continuar estudios en la enseñanza superior y/o para incorporarse a la vida laboral.",
+      "• En dicho contexto aspiramos a entregar una formación general que provea de aprendizajes que contribuyan al crecimiento, desarrollo e identidad personal; al ejercicio pleno de la ciudadanía; al desempeño activo, reflexivo y crítico del ser humano a lo largo de la vida; y al desarrollo de capacidades para tomar decisiones en la continuación de estudios y las proyecciones de carácter laboral.",
+      "• Las necesidades de ofrecer a personas jóvenes y adultas una educación pertinente y significativa, que les provea de conocimientos, habilidades y actitudes necesarias para mejorar su calidad de vida y su participación como ciudadanos y trabajadores. En este contexto, las políticas educacionales que impulsa el Estado de Chile deben orientarse hacia el logro de objetivos de mejoramiento de la calidad y la equidad de oportunidades educativas, brindando de este modo, una experiencia de aprendizaje actualizada y significativa para todo proyecto de vida.",
+      "• La tendencia mundial que sitúa la educación para jóvenes y adultas en el ámbito de la educación continua, cada vez adquiere mayor relevancia en el mundo de hoy, donde además cada persona debe prepararse constantemente para actuar en un entorno que exige cada vez más el dominio de conocimientos, habilidades y actitudes.",
+      "Nuestros egresados y egresadas son personas que provienen de diversas realidades socioculturales, que han adquirido habilidades y competencias para la vida, para desenvolverse adecuadamente en cuanto a la convivencia social, el consumo, la calidad de vida y la inserción laboral, siendo capaces de desarrollar un pensamiento crítico y reflexivo permanente que les permita valorar, evaluar, corregir y concluir, tanto respecto de su propio proyecto de vida y/o de trabajo, como respecto de su entorno. Muestran un constante anhelo de superación y están preparados para continuar estudios en cualquier institución de educación superior o desenvolverse de buena forma en el mundo del trabajo; siendo conscientes de sus derechos y obligaciones, lo que los lleva a participar activa y reflexivamente en la sociedad.",
+      "Este Perfil de los y las Estudiantes responde a las siguientes tres dimensiones clave:",
+      "a) Dimensión Actitudes",
+      "Referida a la relación consigo mismo y con los demás, el estudiantado:",
+      "• Está consciente del valor de sí mismo, de su origen, aceptándose y valorándose como persona.",
+      "• Ama la vida y defiende la unidad de la familia como núcleo social fundamental.",
+      "• Es respetuoso y tolerante con los demás.",
+      "• Es respetuoso con los derechos humanos, la democracia, la diversidad y la equidad.",
+      "• Asume la responsabilidad de sus propios actos y las consecuencias derivadas de ellos.",
+      "• Valora el estudio y el trabajo como fuerza transformadora de sí mismo, de la sociedad y del mundo físico, enfrentando tareas que impliquen esfuerzo, espíritu de sacrificio, autocontrol y autonomía responsable.",
+      "A continuación se presenta la matriz de desempeño actitudinal esperado según años de permanencia en el CEIA:",
+      {
+        "type": "table",
+        "headers": [
+          "2 Años de Permanencia",
+          "3 Años de Permanencia",
+          "4 Años de Permanencia"
+        ],
+        "rows": [
+          [
+            "El estudiantado presenta cierta consciencia de sí mismo, de su origen y del valor de la familia.<br><br>Tiende a ser respetuoso con los demás y asume responsablemente sus propios actos, pese al breve paso por nuestro Centro Educativo.",
+            "El estudiantado está consciente del valor de sí mismo y de su origen, se acepta como alguien que entiende a la familia en sus múltiples manifestaciones, como un elemento nuclear de nuestra sociedad. En este contexto, respeta a los demás con sentido democrático y asume la responsabilidad de sus actos y consecuencias.<br><br>Adquiere una apreciación positiva sobre la importancia del estudio y el trabajo, nociones adquiridas en nuestro centro educativo.",
+            "El estudiantado está consciente del valor de sí mismo y de su origen, se acepta y valora como alguien que entiende a la familia en sus múltiples manifestaciones, como un elemento nuclear de nuestra sociedad. En este contexto de comunidad es reflexivo, crítico y respetuoso de los derechos humanos y la diversidad.<br><br>De este modo, asume la responsabilidad de sus actos y las consecuencias de ello, gracias al proceso transformador de estudio, trabajo y acceso a una mejor calidad de vida experimentado en nuestro centro educativo."
+          ]
+        ]
+      },
+      "b) Dimensión Conocimientos",
+      "Relacionados con la diversidad de éste, el grado de dominio y la intelectualidad, el estudiantado:",
+      "• Comprende y expresa ideas e información con confianza y creatividad en diversas formas de comunicación.",
+      "• Cultiva una actitud de aprecio por lo científico y lo tecnológico integrándolo activamente en su desarrollo.",
+      "• Selecciona, analiza, evalúa y comparte información proveniente de diversas fuentes y aprovecha los recursos tecnológicos a su alcance para profundizar y ampliar sus aprendizajes de manera permanente.",
+      "• Conoce las costumbres, las tradiciones y la historia del país.",
+      "• Conoce su entorno político, económico, social, cultural, científico y tecnológico.",
+      "• Es capaz de reconocer y comprender sus cualidades y limitaciones para, de este modo, contribuir a su aprendizaje y desarrollo personal.",
+      "A continuación se presenta la matriz de desempeño cognitivo esperado según años de permanencia en el CEIA:",
+      {
+        "type": "table",
+        "headers": [
+          "2 Años de Permanencia",
+          "3 Años de Permanencia",
+          "4 Años de Permanencia"
+        ],
+        "rows": [
+          [
+            "El estudiantado expresa ideas y aporta información en diversas formas de comunicación.<br><br>Manifiesta interés por el conocimiento y tiende a compartir información según los recursos que dispone.<br><br>Reconoce costumbres y tradiciones del país, y alcanza una apreciación relativa sobre su entorno político, económico y social.<br><br>Adquiere nociones derivadas de su paso por nuestro centro educacional, sobre sus limitaciones en su propio desarrollo personal.",
+            "El estudiantado expresa ideas y aporta información en diversas formas de comunicación.<br><br>Manifiesta interés por el conocimiento y selecciona y comparte información aprovechando los recursos tecnológicos a su alcance.<br><br>Reconoce las costumbres y tradiciones del país, como también de su entorno político, económico y social.<br><br>Según su experiencia de aprendizaje en nuestro centro educacional, comprende sus limitaciones y cualidades para contribuir a su propio desarrollo personal en cuanto a convivencia social, consumo, calidad de vida e inserción laboral.",
+            "El estudiantado expresa ideas y aporta información en diversas formas de comunicación.<br><br>Manifiesta interés por lo científico y tecnológico incorporándolo activamente en su desarrollo.<br><br>Selecciona, analiza, evalúa y comparte la información proveniente de diversas fuentes, aprovechando de este modo los recursos tecnológicos a su alcance para profundizar y ampliar sus aprendizajes para desenvolverse adecuadamente en cuanto a convivencia social, consumo, calidad de vida e inserción laboral.<br><br>En el contexto educativo que le proporciona nuestro centro educacional, es capaz de desarrollar un pensamiento crítico que le permita valorar, evaluar, corregir y concluir tanto respecto de su propio proyecto de vida y/o de trabajo, como respecto de su entorno."
+          ]
+        ]
+      },
+      "c) Dimensión Habilidades",
+      "Vinculadas a los aspectos intelectuales, sociales y motrices, el estudiantado:",
+      "• Utiliza el lenguaje oral y escrito con claridad, fluidez y de manera adecuada para interactuar en distintos contextos sociales.",
+      "• Aplica, por propia iniciativa, sus habilidades intelectuales de manera crítica y creativa para reconocer y abordar problemas complejos y para tomar decisiones razonadas y éticas.",
+      "• Utiliza las herramientas apropiadas para resolver situaciones de la vida diaria.",
+      "• Argumenta de forma racional y tiene capacidad de análisis.",
+      "• Tiene capacidad para tomar decisiones personales de manera responsable.",
+      "• Posee habilidades para el trabajo colaborativo.",
+      "• Emplea habilidades sociales, tales como la empatía, la comunicación efectiva, la escucha activa y asertividad.",
+      "A continuación se presenta la matriz de desempeño procedimental/habilidades esperado según años de permanencia en el CEIA:",
+      {
+        "type": "table",
+        "headers": [
+          "2 Años de Permanencia",
+          "3 Años de Permanencia",
+          "4 Años de Permanencia"
+        ],
+        "rows": [
+          [
+            "El estudiantado presenta algunas habilidades que le permiten utilizar lenguaje oral y escrito para interactuar en ciertos contextos sociales y culturales.<br><br>Presenta algunas habilidades para el trabajo colaborativo propias de su paso por nuestro centro educativo.",
+            "El estudiantado utiliza el lenguaje oral y escrito con claridad, permitiéndole interactuar en distintos contextos sociales.<br><br>Presenta capacidad de análisis para reconocer algunos problemas complejos, tomando generalmente decisiones lógicas y éticas.<br><br>Presenta algunas habilidades para el trabajo colaborativo.<br><br>Su paso por nuestro centro educativo, le permite adquirir algunas habilidades sociales para relacionarse en ambientes culturalmente diversos e inclusivos, facilitándole su desarrollo.",
+            "Nuestro estudiantado utiliza el lenguaje oral y escrito con claridad y fluidez de manera adecuada, lo que le permite interactuar en distintos contextos sociales.<br><br>En uso de sus habilidades intelectuales y de análisis, reconoce y aborda problemas complejos tomando decisiones lógicas dentro de un marco ético.<br><br>Dispone de evidentes habilidades sociales para el trabajo colaborativo, pues complementa sus conocimientos, competencias, creatividad y capacidades de logro con un efectivo trabajo en equipo.<br><br>Dado el contexto educativo de nuestro centro, adquiere habilidades para desarrollarse con facilidad en ambientes culturalmente diversos e inclusivos, lo que le facilita enfrentar diferentes desafíos de su propio desarrollo humano."
+          ]
+        ]
+      },
+      "4.5 Valores Compartidos por la Comunidad Educativa",
+      "Los valores éticos y comunitarios que sustentan el quehacer pedagógico y la formación de adultos en nuestro CEIA son:",
+      {
+        "type": "table",
+        "headers": [
+          "Valor Valorado",
+          "Comportamientos Esperados y Promovidos"
+        ],
+        "rows": [
+          [
+            "La Solidaridad",
+            "Con el entorno social más directo y también con el más lejano."
+          ],
+          [
+            "El Respeto",
+            "Hacia las diferencias y particularidades de cada ser humano."
+          ],
+          [
+            "La Responsabilidad",
+            "Frente a los desafíos y los efectos de las propias decisiones."
+          ],
+          [
+            "La Tolerancia",
+            "A las diversas opiniones, ideas o actitudes de los otros aunque no coincidan con las propias."
+          ],
+          [
+            "El Compromiso",
+            "Con los acuerdos tácitos o implícitos al que llegan dos o más partes tras hacer ciertas concesiones cada una de ellas."
+          ],
+          [
+            "La Cooperación",
+            "Interés por unirse a otros que colaboran entre sí para lograr fines comunes."
+          ],
+          [
+            "La Honradez",
+            "Frente a las acciones cotidianas y en las acciones relacionadas con la comunidad."
+          ],
+          [
+            "La Honestidad",
+            "Con la verdad y la transparencia."
+          ],
+          [
+            "La Empatía",
+            "Escuchar atenta(o) al otro(a) dando importancia a las emociones."
+          ]
+        ]
+      },
+      "V. GESTIÓN DEL PROYECTO EDUCATIVO INSTITUCIONAL",
+      "5.1 Plan de Mejoramiento y Autoevaluación Institucional",
+      "A partir de las prácticas del “Plan de Mejoramiento Educativo (PME)”, y de la Autoevaluación Institucional realizada de forma participativa, se identifican las siguientes Fortalezas, Debilidades y Brechas por cada Área de Gestión:",
+      "A) Área de Gestión Pedagógica",
+      {
+        "type": "table",
+        "headers": [
+          "Gestión Pedagógica (Sello: Formación para la vida y el trabajo)",
+          "Detalle Autoevaluación"
+        ],
+        "rows": [
+          [
+            "Fortalezas",
+            "• Equipo Directivo con experiencia en educación de adultos y con profesionales con tiempos de dedicación al trabajo técnico pedagógico.<br>• Espacios de reflexión pedagógica y compromiso docente con la labor educativa y de aprendizaje.<br>• Docentes que manifiestan interés por sus estudiantes, entregando de forma constante retroalimentación a sus estudiantes, valorando los logros y los esfuerzos de éstos.<br>• Docentes que logran que la mayor parte del tiempo de las clases se destine al proceso de enseñanza aprendizaje.<br>• Se identifican a tiempo a los estudiantes con dificultades sociales, afectivas y conductuales, contando con mecanismos efectivos para su apoyo.<br>• Se identifican a tiempo a los estudiantes con riesgo de deserción escolar, contando con mecanismos efectivos para asegurar su continuidad en el sistema escolar.<br>• El establecimiento cuenta con estrategias efectivas para potenciar a los estudiantes con intereses diversos y con habilidades destacadas."
+          ],
+          [
+            "Debilidades*",
+            "• La coordinación de un sistema efectivo de evaluaciones de y para el aprendizaje.<br>• Monitoreo permanentemente en la cobertura curricular y los resultados de aprendizaje de los estudiantes.<br>• Promoción entre los docentes de un aprendizaje colaborativo e intercambio de recursos educativos.<br>• Orientaciones y lineamientos pedagógicos comunes para la implementación efectiva del currículum.<br>• Observación de clases y retroalimentación sistemática.<br>• Uso de estrategias efectivas de enseñanza - aprendizaje en el aula."
+          ]
+        ]
+      },
+      "B) Área de Gestión de Liderazgo",
+      {
+        "type": "table",
+        "headers": [
+          "Gestión de Liderazgo (Sello: Formación para la vida y el trabajo)",
+          "Detalle Autoevaluación y Brechas"
+        ],
+        "rows": [
+          [
+            "Fortalezas",
+            "• El sostenedor introduce los cambios estructurales necesarios para asegurar la viabilidad y buen funcionamiento del establecimiento.<br>• La dirección asume como su principal responsabilidad el logro de los objetivos formativos y académicos del establecimiento.<br>• La dirección conduce de manera efectiva el funcionamiento general del establecimiento.<br>• El establecimiento recopila y sistematiza continuamente datos sobre las características, los resultados educativos, los indicadores de procesos relevantes y la satisfacción de las familias de los alumnos (no existen apoderados)."
+          ],
+          [
+            "Debilidades*",
+            "• El sostenedor genera canales fluidos de comunicación con el Director y establece una buena relación con la comunidad.<br>• La dirección logra que la comunidad educativa comparta la orientación, las prioridades and las metas educativas del establecimiento.<br>• La dirección instaura una cultura de altas expectativas en la comunidad educativa.<br>• El establecimiento realiza un proceso sistemático de autoevaluación que sirve de base para elaborar el Plan de Mejoramiento Educativo.<br>• El sostenedor y el Equipo Directivo comprenden, analizan y utilizan los datos recopilados para tomar decisiones educativas y monitorear la gestión."
+          ],
+          [
+            "Brechas Detectadas",
+            "• La brecha de liderazgo del establecimiento implica una serie de dificultades asociadas al funcionamiento cotidiano del CEIA, éstas son la revisión, el cuestionamiento y la modificación de conductas obstaculizadoras para cumplir con el PEI; especialmente lo relacionado con las expectativas de aprendizaje del estudiantado.<br>• Lograr que los estudiantes trabajen dedicadamente, sean responsables y de manera independiente.<br>• Los problemas fundamentales del área son la ausencia de espacios de trabajo, las orientaciones y lineamientos de gestión pedagógica adecuados y coherentes con los desafíos planteados en el proyecto educativo institucional."
+          ]
+        ]
+      },
+      "C) Área de Gestión de la Convivencia Escolar",
+      {
+        "type": "table",
+        "headers": [
+          "Convivencia Escolar (Sello: Formación para la vida y el trabajo)",
+          "Detalle Autoevaluación y Brechas"
+        ],
+        "rows": [
+          [
+            "Fortalezas",
+            "• El Equipo Directivo y docente basa su acción formativa en la convicción de que el estudiantado pueda desarrollar mejores actitudes y comportamientos.<br>• El Equipo Directivo y docentes promueve hábitos de vida saludable y previenen conductas de riesgo entre estudiantes.<br>• El estudiantado reconoce y valora el establecimiento como un espacio de encuentro y aprendizaje.<br>• El Equipo Directivo y docentes promueve y exige un ambiente de respeto y de buen trato entre todos los miembros de la comunidad.<br>• El equipo Directivo y docentes valora y promueve la diversidad como parte de la riqueza de los grupos humanos, previniendo cualquier tipo de discriminación.<br>• El Equipo Directivo y docente enfrenta y corrige formativamente las conductas disruptivas del estudiantado; desde las situaciones menores hasta las más graves.<br>• El Equipo Directivo y docente promueve entre el estudiantado un sentido de responsabilidad con el entorno y la sociedad, motivándolos a realizar aportes concretos a la comunidad.<br>• El establecimiento cuenta con un reglamento de convivencia actualizado que explicita las normas para organizar la vida en común, lo difunde a la comunidad educativa y exige que se cumpla."
+          ],
+          [
+            "Debilidades*",
+            "• El establecimiento monitorea la implementación del plan de formación y la observación de sus impactos.<br>• El establecimiento cuenta con canales de comunicación fluidos y eficientes con todos los estamentos y actores.<br>• El establecimiento fomenta de manera sistemática entre los estudiantes la expresión de opiniones, la deliberación y el debate fundamentado de ideas."
+          ],
+          [
+            "Brechas Detectadas",
+            "• Generar condiciones que propicien un sentido de pertenencia en todos los actores, especialmente en los estudiantes, a través de un ambiente de respeto, buen trato, oportunidades de aprendizaje y resolución pacífica de los conflictos."
+          ]
+        ]
+      },
+      "D) Área de Gestión de Recursos",
+      {
+        "type": "table",
+        "headers": [
+          "Gestión de Recursos (Sello: Formación para la vida y el trabajo)",
+          "Detalle Autoevaluación y Brechas"
+        ],
+        "rows": [
+          [
+            "Fortalezas",
+            "• El establecimiento educacional cuenta con un clima laboral positivo.<br>• El establecimiento educacional gestiona la matrícula y la asistencia.<br>• El establecimiento lleva un registro ordenado de los ingresos y gastos monetarios; cuando corresponde, rinde cuenta del uso de éstos recursos.<br>• El establecimiento gestiona su participación en los programas de apoyo y asistencia técnica disponibles y los selecciona de acuerdo con las necesidades institucionales.<br>• El establecimiento conoce y utiliza las redes existentes para potenciar el Proyecto Educativo Institucional.<br>• El establecimiento cuenta con una Biblioteca CRA para apoyar el aprendizaje del estudiantado y fomentar en éstos el hábito lector.<br>• El establecimiento cuenta con la infraestructura y el equipamiento exigido por la normativa, encontrándose éstos en condiciones que facilitan el aprendizaje del estudiantado y el bienestar de la comunidad educativa.<br>• El establecimiento cuenta con un sistema de evaluación y retroalimentación del desempeño del personal.<br>• El establecimiento gestiona el desarrollo profesional y técnico del personal según las necesidades pedagógicas y administrativas."
+          ],
+          [
+            "Debilidades*",
+            "• No se cuenta con una infraestructura adecuada en el establecimiento para atención de funcionarios y para la implementación de talleres TP en especialidad electricidad y talleres artísticos de libre elección.<br>• El establecimiento no cuenta con los recursos didácticos e insumos suficientes para potenciar el aprendizaje del estudiantado."
+          ],
+          [
+            "Brechas Detectadas",
+            "• El desafío fundamental se focaliza en la dimensión de gestión de personas y específicamente en el desarrollo profesional docente."
+          ]
+        ]
+      },
+      "*Prácticas del “Plan de Mejoramiento Educativo 2015”, Mineduc, evaluadas en un nivel bajo (1 o 2).",
+      "5.2 Objetivos y Metas Estratégicas por Área de Gestión",
+      "Los objetivos de largo plazo del CEIA se organizan de forma multidimensional en la siguiente matriz estratégica:",
+      {
+        "type": "table",
+        "headers": [
+          "Área de Gestión",
+          "Objetivo Estratégico",
+          "Meta Estratégica"
+        ],
+        "rows": [
+          [
+            "Gestión Pedagógica",
+            "Establecer condiciones institucionales para un trabajo colaborativo y sistemático entre docentes, favoreciendo su aprendizaje profesional y la implementación de innovaciones pedagógicas que respondan adecuadamente a las definiciones de un modelo pedagógico coherente con el PEI.",
+            "El 100% de los docentes deberá desarrollar prácticas pedagógicas coherentes con el modelo pedagógico diseñado."
+          ],
+          [
+            "Gestión de Liderazgo",
+            "Generar, a partir de la implementación y apropiación del PEI, una cultura de altas expectativas de aprendizaje compartido por todos en la comunidad educativa. Esto con el objeto de asegurar el logro de los objetivos formativos y académicos entre el estudiantado.",
+            "El 80% de los docentes se involucrará con un alto nivel de expectativas con el estudiantado del centro educacional. Lo anterior, a partir del conocimiento de estrategias de aprendizaje adecuadas a las características de esto."
+          ],
+          [
+            "Convivencia Escolar",
+            "Generar condiciones que propicien un sentido de pertenencia entre los actores de la comunidad educativa, especialmente en el estudiantado; ya sea a través de un ambiente de respeto, buenos tratos, oportunidades de aprendizajes y resolución pacífica de conflictos.",
+            "El 80% del equipo docente y del estudiantado manifiesta altos niveles de satisfacción con la propuesta educativa y el ambiente de la comunidad escolar (encuesta de satisfacción)."
+          ],
+          [
+            "Gestión de Recursos",
+            "Generar condiciones para diagnosticar sistemáticamente las necesidades de actualización, formación y perfeccionamiento de todos los docentes. Esto, a través de un sistema de evaluación y retroalimentación del desempeño.",
+            "El 100% del equipo docente es evaluado y retroalimentado sistemáticamente de acuerdo a los criterios consensuados."
+          ]
+        ]
+      },
+      "5.3 Nuestra Oferta Educativa",
+      "Como establecimiento creemos que nuestra oferta académica es tan simple como concreta. Es decir, proyectamos coherencia y consistencia tanto en evidenciar una trayectoria en educación, como en proponer un proyecto educativo que sea un efectivo instrumento de desarrollo y de formación para que jóvenes y adultos sean protagonistas junto a nosotros para construir esta sociedad.",
+      "Sin duda, con nuestra oferta académica estamos realizando una contribución concreta para la construcción de una sociedad más justa, integrada, inclusiva y solidaria, constituyéndonos en una opción efectiva de construcción de capital cultural y social en beneficio del país, nuestros estudiantes, sus familias y de la comunidad en general en la cual estamos insertos.",
+      "Esta oferta académica debe ser vista, sin duda, como el camino que hemos definido para cumplir con el sueño de poder desarrollar de mejor manera nuestras tareas de educadores para entregar día a día la formación integral para la vida y el trabajo en la cual nos estamos comprometiendo como comunidad educativa.",
+      "En base a lo anterior, la oferta educativa que hemos dispuesto para todos/as aquellos/as que deseen continuar, regularizar y terminar sus estudios básicos y medios es diversa, según las necesidades de cada uno/a:",
+      "A) Oferta en Modalidad Regular",
+      {
+        "type": "table",
+        "headers": [
+          "Jornada / Modalidad",
+          "Niveles y Cursos",
+          "Duración"
+        ],
+        "rows": [
+          [
+            "Educación Básica Regular<br>(Lunes a Viernes Mañana | Tarde | Vespertina)",
+            "3º Nivel Básico (7º y 8º Básico)",
+            "1 año"
+          ],
+          [
+            "Educación Media Científico Humanista<br>(Lunes a Viernes Mañana | Tarde | Vespertina)",
+            "1º Ciclo Medio (1º y 2º Medio)<br>2º Ciclo Medio (3º y 4º Medio)",
+            "2 años (1 año por ciclo)"
+          ],
+          [
+            "Educación Técnico Profesional Adultos<br>(Lunes a Viernes Mañana | Tarde | Vespertina)",
+            "1º y 2º Ciclo Medio integrado, más 3º y 4º Medio TP",
+            "3 años"
+          ]
+        ]
+      },
+      "B) Oferta Especialidades Educación Media Técnico Profesional",
+      {
+        "type": "table",
+        "headers": [
+          "Especialidad Técnico Profesional",
+          "Nivel / Cursos",
+          "Duración y Horario"
+        ],
+        "rows": [
+          [
+            "Técnico de Nivel Medio en Atención de Párvulos",
+            "1º y 2º Medio (Común)<br>3º Medio TP<br>4º Medio TP",
+            "3 años<br>(Jornada Lunes a Viernes Mañana | Tarde)"
+          ],
+          [
+            "Técnico de Nivel Medio en Electricidad",
+            "1º y 2º Medio (Común)<br>3º Medio TP<br>4º Medio TP",
+            "3 años<br>(Jornada Lunes a Viernes Mañana | Tarde)"
+          ]
+        ]
+      }
     ]
   },
   "reglamento_interno": {
@@ -2638,13 +3045,34 @@
           "7º y 8º BÁSICO"
         ],
         "rows": [
-          ["LENGUAJE Y COMUNICACIÓN", "4 HORAS"],
-          ["EDUCACIÓN MATEMÁTICAS", "4 HORAS"],
-          ["ESTUDIOS SOCIALES", "4 HORAS"],
-          ["CIENCIAS NATURALES", "4 HORAS"],
-          ["INSTALADOR ELÉCTRICO (OFICIO)", "6 HORAS"],
-          ["JEFATURA", "1 HORA"],
-          ["TOTAL HORAS", "23 HORAS"]
+          [
+            "LENGUAJE Y COMUNICACIÓN",
+            "4 HORAS"
+          ],
+          [
+            "EDUCACIÓN MATEMÁTICAS",
+            "4 HORAS"
+          ],
+          [
+            "ESTUDIOS SOCIALES",
+            "4 HORAS"
+          ],
+          [
+            "CIENCIAS NATURALES",
+            "4 HORAS"
+          ],
+          [
+            "INSTALADOR ELÉCTRICO (OFICIO)",
+            "6 HORAS"
+          ],
+          [
+            "JEFATURA",
+            "1 HORA"
+          ],
+          [
+            "TOTAL HORAS",
+            "23 HORAS"
+          ]
         ]
       },
       "B.- EDUCACIÓN MEDIA TÉCNICO PROFESIONAL: ELECTRICIDAD",
@@ -2657,26 +3085,126 @@
           "4º AÑO"
         ],
         "rows": [
-          ["LENGUA Y LITERATURA / LENGUAJE Y COMUNICACIÓN", "4 HORAS", "3 HORAS", "2 HORAS"],
-          ["MATEMÁTICA / EDUCACIÓN MATEMÁTICAS", "4 HORAS", "3 HORAS", "2 HORAS"],
-          ["CIENCIAS NATURALES", "4 HORAS", "-", "-"],
-          ["HISTORIA Y GEOGRAFÍA Y CIENCIAS SOCIALES / ESTUDIOS SOCIALES", "4 HORAS", "4 HORAS", "-"],
-          ["INGLÉS", "4 HORAS", "-", "2 HORAS"],
-          ["MANTENIMIENTO DE MAQUINARIAS Y EQUIPOS Y SISTEMAS ELÉCTRICOS", "-", "4 HORAS", "-"],
-          ["TEC. DE LA INFORM. Y LAS TELEC.", "-", "2 HORAS", "-"],
-          ["CONSUMO Y CALIDAD DE VIDA", "-", "2 HORAS", "-"],
-          ["CONVIVENCIA SOCIAL", "-", "2 HORAS", "-"],
-          ["INSERCIÓN LABORAL", "-", "2 HORAS", "-"],
-          ["INSTALACIONES ELÉCTRICAS", "-", "-", "3 HORAS"],
-          ["MONTAJE Y CONST. ELÉCTRICAS", "-", "-", "3 HORAS"],
-          ["SISTEMA ELECTRÓNICO DIGITAL", "-", "-", "3 HORAS"],
-          ["MEDICIÓN Y ANÁLISIS DE COMP.", "-", "-", "3 HORAS"],
-          ["PLC (CONTROLADOR LÓGICO PROGRAMABLE)", "-", "-", "3 HORAS"],
-          ["PROYECTO ELECTRÓNICO", "-", "-", "3 HORAS"],
-          ["MANTENCION (MOME)", "-", "-", "3 HORAS"],
-          ["DISEÑO Y OPERACIÓN", "-", "-", "3 HORAS"],
-          ["JEFATURA / ORIENTACIÓN", "1 HORA", "1 HORA", "1 HORA"],
-          ["TOTAL HORAS", "25 HORAS", "25 HORAS", "25 HORAS"]
+          [
+            "LENGUA Y LITERATURA / LENGUAJE Y COMUNICACIÓN",
+            "4 HORAS",
+            "3 HORAS",
+            "2 HORAS"
+          ],
+          [
+            "MATEMÁTICA / EDUCACIÓN MATEMÁTICAS",
+            "4 HORAS",
+            "3 HORAS",
+            "2 HORAS"
+          ],
+          [
+            "CIENCIAS NATURALES",
+            "4 HORAS",
+            "-",
+            "-"
+          ],
+          [
+            "HISTORIA Y GEOGRAFÍA Y CIENCIAS SOCIALES / ESTUDIOS SOCIALES",
+            "4 HORAS",
+            "4 HORAS",
+            "-"
+          ],
+          [
+            "INGLÉS",
+            "4 HORAS",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "MANTENIMIENTO DE MAQUINARIAS Y EQUIPOS Y SISTEMAS ELÉCTRICOS",
+            "-",
+            "4 HORAS",
+            "-"
+          ],
+          [
+            "TEC. DE LA INFORM. Y LAS TELEC.",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "CONSUMO Y CALIDAD DE VIDA",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "CONVIVENCIA SOCIAL",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "INSERCIÓN LABORAL",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "INSTALACIONES ELÉCTRICAS",
+            "-",
+            "-",
+            "3 HORAS"
+          ],
+          [
+            "MONTAJE Y CONST. ELÉCTRICAS",
+            "-",
+            "-",
+            "3 HORAS"
+          ],
+          [
+            "SISTEMA ELECTRÓNICO DIGITAL",
+            "-",
+            "-",
+            "3 HORAS"
+          ],
+          [
+            "MEDICIÓN Y ANÁLISIS DE COMP.",
+            "-",
+            "-",
+            "3 HORAS"
+          ],
+          [
+            "PLC (CONTROLADOR LÓGICO PROGRAMABLE)",
+            "-",
+            "-",
+            "3 HORAS"
+          ],
+          [
+            "PROYECTO ELECTRÓNICO",
+            "-",
+            "-",
+            "3 HORAS"
+          ],
+          [
+            "MANTENCION (MOME)",
+            "-",
+            "-",
+            "3 HORAS"
+          ],
+          [
+            "DISEÑO Y OPERACIÓN",
+            "-",
+            "-",
+            "3 HORAS"
+          ],
+          [
+            "JEFATURA / ORIENTACIÓN",
+            "1 HORA",
+            "1 HORA",
+            "1 HORA"
+          ],
+          [
+            "TOTAL HORAS",
+            "25 HORAS",
+            "25 HORAS",
+            "25 HORAS"
+          ]
         ]
       },
       "*Decreto 10/22",
@@ -2690,28 +3218,138 @@
           "4º AÑO"
         ],
         "rows": [
-          ["LENGUA Y LITERATURA / LENGUAJE Y COMUNICACIÓN", "4 HORAS", "3 HORAS", "2 HORAS"],
-          ["MATEMÁTICA / EDUCACIÓN MATEMÁTICAS", "4 HORAS", "3 HORAS", "2 HORAS"],
-          ["CIENCIAS NATURALES", "4 HORAS", "-", "-"],
-          ["HISTORIA Y GEOGRAFÍA Y CIENCIAS SOCIALES / ESTUDIOS SOCIALES", "4 HORAS", "4 HORAS", "-"],
-          ["INGLÉS", "4 HORAS", "-", "2 HORAS"],
-          ["TEC. DE LA INFORM. Y LAS TELEC.", "-", "2 HORAS", "-"],
-          ["CONSUMO Y CALIDAD DE VIDA", "-", "2 HORAS", "-"],
-          ["CONVIVENCIA SOCIAL", "-", "2 HORAS", "-"],
-          ["INSERCIÓN LABORAL", "-", "2 HORAS", "-"],
-          ["MATERIAL DIDÁCTICO Y DE AMBIENTACIÓN", "-", "2 HORAS", "-"],
-          ["ACTIVIDADES EDUCATIVAS PARA PÁRVULOS", "-", "2 HORAS", "-"],
-          ["HIGIENE EN PÁRVULO", "-", "2 HORAS", "-"],
-          ["SITUACIÓN DE RIESGO SOCIAL", "-", "2 HORAS", "-"],
-          ["ACTIVIDADES MUSICALES CON GUITARRA", "-", "2 HORAS", "-"],
-          ["ACTIVIDADES DE EXPRESIÓN", "-", "-", "4 HORAS"],
-          ["ALIMENTACIÓN EN PÁRVULOS", "-", "-", "2 HORAS"],
-          ["ACTIVIDADES RECREATIVAS", "-", "-", "4 HORAS"],
-          ["SALUD EN PÁRVULOS", "-", "-", "4 HORAS"],
-          ["TRABAJO EDUCATIVO", "-", "-", "2 HORAS"],
-          ["ACTIVIDADES CON LA FAMILIA", "-", "-", "2 HORAS"],
-          ["JEFATURA", "1 HORA", "1 HORA", "1 HORA"],
-          ["TOTAL HORAS", "25 HORAS", "25 HORAS", "25 HORAS"]
+          [
+            "LENGUA Y LITERATURA / LENGUAJE Y COMUNICACIÓN",
+            "4 HORAS",
+            "3 HORAS",
+            "2 HORAS"
+          ],
+          [
+            "MATEMÁTICA / EDUCACIÓN MATEMÁTICAS",
+            "4 HORAS",
+            "3 HORAS",
+            "2 HORAS"
+          ],
+          [
+            "CIENCIAS NATURALES",
+            "4 HORAS",
+            "-",
+            "-"
+          ],
+          [
+            "HISTORIA Y GEOGRAFÍA Y CIENCIAS SOCIALES / ESTUDIOS SOCIALES",
+            "4 HORAS",
+            "4 HORAS",
+            "-"
+          ],
+          [
+            "INGLÉS",
+            "4 HORAS",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "TEC. DE LA INFORM. Y LAS TELEC.",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "CONSUMO Y CALIDAD DE VIDA",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "CONVIVENCIA SOCIAL",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "INSERCIÓN LABORAL",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "MATERIAL DIDÁCTICO Y DE AMBIENTACIÓN",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "ACTIVIDADES EDUCATIVAS PARA PÁRVULOS",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "HIGIENE EN PÁRVULO",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "SITUACIÓN DE RIESGO SOCIAL",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "ACTIVIDADES MUSICALES CON GUITARRA",
+            "-",
+            "2 HORAS",
+            "-"
+          ],
+          [
+            "ACTIVIDADES DE EXPRESIÓN",
+            "-",
+            "-",
+            "4 HORAS"
+          ],
+          [
+            "ALIMENTACIÓN EN PÁRVULOS",
+            "-",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "ACTIVIDADES RECREATIVAS",
+            "-",
+            "-",
+            "4 HORAS"
+          ],
+          [
+            "SALUD EN PÁRVULOS",
+            "-",
+            "-",
+            "4 HORAS"
+          ],
+          [
+            "TRABAJO EDUCATIVO",
+            "-",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "ACTIVIDADES CON LA FAMILIA",
+            "-",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "JEFATURA",
+            "1 HORA",
+            "1 HORA",
+            "1 HORA"
+          ],
+          [
+            "TOTAL HORAS",
+            "25 HORAS",
+            "25 HORAS",
+            "25 HORAS"
+          ]
         ]
       },
       "*Decreto 10/22",
@@ -2724,18 +3362,66 @@
           "3º Y 4º H-C"
         ],
         "rows": [
-          ["LENGUA Y LITERATURA / LENGUAJE Y COMUNICACIÓN", "4 HORAS", "4 HORAS"],
-          ["MATEMÁTICA / EDUCACIÓN MATEMÁTICAS", "4 HORAS", "4 HORAS"],
-          ["CIENCIAS NATURALES", "4 HORAS", "4 HORAS"],
-          ["HISTORIA, GEOGRAFÍA Y CIENCIAS SOCIALES / ESTUDIOS SOCIALES", "4 HORAS", "4 HORAS"],
-          ["INGLÉS", "4 HORAS", "4 HORAS"],
-          ["PENSAMIENTO COMPUTACIONAL", "-", "2 HORAS"],
-          ["RESPONSABILIDAD PERSONAL PERSONAL Y SOCIAL", "-", "2 HORAS"],
-          ["CONVIVENCIA SOCIAL", "-", "2 HORAS"],
-          ["INSERCIÓN LABORAL", "-", "2 HORAS"],
-          ["FORMACIÓN DIFERENCIADA (*)", "2 HORAS", "2 HORAS"],
-          ["JEFATURA", "1 HORA", "1 HORA"],
-          ["TOTAL HORAS", "25 HORAS", "25 HORAS"]
+          [
+            "LENGUA Y LITERATURA / LENGUAJE Y COMUNICACIÓN",
+            "4 HORAS",
+            "4 HORAS"
+          ],
+          [
+            "MATEMÁTICA / EDUCACIÓN MATEMÁTICAS",
+            "4 HORAS",
+            "4 HORAS"
+          ],
+          [
+            "CIENCIAS NATURALES",
+            "4 HORAS",
+            "4 HORAS"
+          ],
+          [
+            "HISTORIA, GEOGRAFÍA Y CIENCIAS SOCIALES / ESTUDIOS SOCIALES",
+            "4 HORAS",
+            "4 HORAS"
+          ],
+          [
+            "INGLÉS",
+            "4 HORAS",
+            "4 HORAS"
+          ],
+          [
+            "PENSAMIENTO COMPUTACIONAL",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "RESPONSABILIDAD PERSONAL PERSONAL Y SOCIAL",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "CONVIVENCIA SOCIAL",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "INSERCIÓN LABORAL",
+            "-",
+            "2 HORAS"
+          ],
+          [
+            "FORMACIÓN DIFERENCIADA (*)",
+            "2 HORAS",
+            "2 HORAS"
+          ],
+          [
+            "JEFATURA",
+            "1 HORA",
+            "1 HORA"
+          ],
+          [
+            "TOTAL HORAS",
+            "25 HORAS",
+            "25 HORAS"
+          ]
         ]
       },
       "*Decreto 10/22 (*)Es obligatorio para el establecimiento ofrecerla y optativo para el estudiante cursarla.",
