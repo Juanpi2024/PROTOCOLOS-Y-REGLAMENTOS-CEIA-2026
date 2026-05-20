@@ -1,6 +1,7 @@
 /**
  * CEIA Juanita Zúñiga - Protocol Management System
- * Features: Dynamic card generation, search, external links, loading states, accessibility
+ * Features: Dynamic card generation, real-time search, category filters, 
+ *           sticky two-column modal layout, print/PDF system, smart parser
  */
 
 const ProtocolApp = {
@@ -8,20 +9,26 @@ const ProtocolApp = {
         data: null,
         activeProtocolKey: null,
         isModalOpen: false,
-        isLoading: true
+        isLoading: true,
+        searchQuery: '',
+        selectedCategory: 'all'
     },
 
     ui: {
         modalOverlay: null,
         modalContent: null,
         body: null,
-        protocolContainer: null
+        protocolContainer: null,
+        searchInput: null,
+        searchClear: null,
+        filterTabs: null
     },
 
     async init() {
         this.cacheUI();
         await this.loadData();
-        this.renderCards();
+        this.updateFilterCounts();
+        this.filterAndRenderCards();
         this.bindEvents();
         this.updateURLFromHash();
     },
@@ -31,6 +38,9 @@ const ProtocolApp = {
         this.ui.modalContent = document.getElementById('modal-content');
         this.ui.body = document.body;
         this.ui.protocolContainer = document.getElementById('protocol-container');
+        this.ui.searchInput = document.getElementById('search-input');
+        this.ui.searchClear = document.getElementById('search-clear');
+        this.ui.filterTabs = document.getElementById('filter-tabs');
     },
 
     async loadData() {
@@ -58,9 +68,9 @@ const ProtocolApp = {
     renderLoading() {
         if (!this.ui.protocolContainer) return;
         this.ui.protocolContainer.innerHTML = `
-            <div style="grid-column: 1/-1; text-align: center; padding: 3rem;">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">⏳</div>
-                <p>Cargando protocolos...</p>
+            <div style="grid-column: 1/-1; text-align: center; padding: 4rem 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem; animation: spin 1.5s linear infinite;">⏳</div>
+                <p style="font-size: 1.2rem; color: var(--text-muted); font-weight: 500;">Cargando reglamentos y protocolos oficiales...</p>
             </div>
         `;
     },
@@ -68,10 +78,11 @@ const ProtocolApp = {
     renderError(message) {
         if (!this.ui.protocolContainer) return;
         this.ui.protocolContainer.innerHTML = `
-            <div style="grid-column: 1/-1; text-align: center; padding: 3rem; background: #fee; border-radius: 12px;">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">❌</div>
-                <p style="color: #c00;">Error al cargar los protocolos: ${this.escapeHtml(message)}</p>
-                <button onclick="location.reload()" style="margin-top: 1rem; padding: 0.8rem 2rem; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer;">Reintentar</button>
+            <div style="grid-column: 1/-1; text-align: center; padding: 3rem; background: #fff5f5; border-radius: 20px; border: 1px solid rgba(220, 38, 38, 0.15); box-shadow: var(--shadow-premium);">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">❌</div>
+                <h3 style="font-size: 1.5rem; color: #dc2626; margin-bottom: 0.5rem;">Error al cargar la información</h3>
+                <p style="color: var(--text-muted);">${this.escapeHtml(message)}</p>
+                <button onclick="location.reload()" style="margin-top: 1.5rem; padding: 0.8rem 2rem; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: var(--transition);">Reintentar</button>
             </div>
         `;
     },
@@ -83,12 +94,89 @@ const ProtocolApp = {
         return div.innerHTML;
     },
 
-    renderCards() {
-        if (!this.ui.protocolContainer || !this.state.data) return;
+    updateFilterCounts() {
+        if (!this.state.data) return;
         
+        const entries = Object.values(this.state.data);
+        const total = entries.length;
+        const documentos = entries.filter(e => e.tipo === 'documento').length;
+        const protocolos = entries.filter(e => e.tipo === 'protocolo').length;
+        
+        const countAll = document.getElementById('count-all');
+        const countDoc = document.getElementById('count-documento');
+        const countProt = document.getElementById('count-protocolo');
+        
+        if (countAll) countAll.textContent = total;
+        if (countDoc) countDoc.textContent = documentos;
+        if (countProt) countProt.textContent = protocolos;
+    },
+
+    updateSearchClearButton() {
+        if (!this.ui.searchClear) return;
+        if (this.state.searchQuery.length > 0) {
+            this.ui.searchClear.style.display = 'flex';
+        } else {
+            this.ui.searchClear.style.display = 'none';
+        }
+    },
+
+    filterAndRenderCards() {
+        if (!this.ui.protocolContainer || !this.state.data) return;
+
+        const query = this.state.searchQuery.toLowerCase().trim();
+        const category = this.state.selectedCategory;
+        
+        let filteredEntries = Object.entries(this.state.data).filter(([key, protocol]) => {
+            // Category filter
+            if (category !== 'all' && protocol.tipo !== category) {
+                return false;
+            }
+            
+            // Search query filter
+            if (query) {
+                const matchTitle = protocol.titulo.toLowerCase().includes(query);
+                const matchContent = protocol.contenido_completo.some(p => p.toLowerCase().includes(query));
+                return matchTitle || matchContent;
+            }
+            
+            return true;
+        });
+
+        this.renderFilteredCards(filteredEntries);
+    },
+
+    renderFilteredCards(entries) {
         this.ui.protocolContainer.innerHTML = '';
         
-        Object.entries(this.state.data).forEach(([key, protocol]) => {
+        if (entries.length === 0) {
+            this.ui.protocolContainer.innerHTML = `
+                <div class="no-results-card" style="grid-column: 1/-1; text-align: center; padding: 4rem 2rem; background: var(--bg-dark-alt); border-radius: 24px; border: 1px solid var(--glass-border); box-shadow: var(--shadow-premium);">
+                    <div style="font-size: 3.5rem; margin-bottom: 1.5rem; animation: pulse 2s infinite;">🔍</div>
+                    <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">No se encontraron resultados</h3>
+                    <p style="color: var(--text-muted); max-width: 450px; margin: 0 auto 1.5rem;">
+                        No pudimos encontrar reglamentos o protocolos que coincidan con "${this.escapeHtml(this.state.searchQuery)}". Intenta con otras palabras clave.
+                    </p>
+                    <button id="btn-reset-search" class="btn-premium" style="padding: 0.6rem 1.8rem; font-size: 0.95rem; cursor: pointer;">Limpiar Filtros</button>
+                </div>
+            `;
+            
+            document.getElementById('btn-reset-search')?.addEventListener('click', () => {
+                if (this.ui.searchInput) {
+                    this.ui.searchInput.value = '';
+                    this.state.searchQuery = '';
+                    this.updateSearchClearButton();
+                }
+                this.state.selectedCategory = 'all';
+                this.ui.filterTabs?.querySelectorAll('.filter-tab').forEach(t => {
+                    t.classList.remove('active');
+                    if (t.dataset.category === 'all') t.classList.add('active');
+                });
+                this.filterAndRenderCards();
+            });
+            return;
+        }
+
+        entries.forEach(([key, protocol]) => {
             const card = document.createElement('article');
             card.className = 'protocol-card';
             card.setAttribute('role', 'button');
@@ -96,16 +184,31 @@ const ProtocolApp = {
             card.setAttribute('aria-label', `Ver ${protocol.titulo}`);
             card.dataset.key = key;
             
+            const isDoc = protocol.tipo === 'documento';
+            const badgeHtml = `<span class="card-badge ${isDoc ? 'badge-doc' : 'badge-proto'}">${isDoc ? '🏛️ Documento' : '🛡️ Protocolo'}</span>`;
+            
             const iconSrc = protocol.icono || 'https://cdn-icons-png.flaticon.com/512/3330/3330316.png';
             const hasExternalLink = !!protocol.url_externa;
             
+            // Limit card title cleanly to keep grids perfectly aligned
+            let shortTitle = protocol.titulo;
+            if (shortTitle.includes(':')) {
+                shortTitle = shortTitle.split(':')[0];
+            } else if (shortTitle.includes(' - ')) {
+                shortTitle = shortTitle.split(' - ')[0];
+            }
+            if (shortTitle.length > 55) {
+                shortTitle = shortTitle.substring(0, 52) + '...';
+            }
+            
             card.innerHTML = `
+                ${badgeHtml}
                 <div class="icon-wrapper">
                     <img src="${this.escapeHtml(iconSrc)}" alt="Icono" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>'">
                 </div>
-                <h2>${this.escapeHtml(protocol.titulo.split(':')[0].substring(0, 50))}${protocol.titulo.length > 50 ? '...' : ''}</h2>
-                <p>${hasExternalLink ? 'Documento externo disponible en línea' : 'Protocolo institucional'}</p>
-                <button class="btn-premium">${hasExternalLink ? 'Ver Documento' : 'Acceder al Protocolo'}</button>
+                <h2>${this.escapeHtml(shortTitle)}</h2>
+                <p>${hasExternalLink ? 'Enlace externo disponible' : 'Documento completo interactivo'}</p>
+                <button class="btn-premium">${hasExternalLink ? 'Ver Documento ↗' : 'Acceder al Protocolo'}</button>
             `;
             
             card.addEventListener('click', () => this.openProtocol(key));
@@ -121,6 +224,34 @@ const ProtocolApp = {
     },
 
     bindEvents() {
+        // Search Input events
+        this.ui.searchInput?.addEventListener('input', (e) => {
+            this.state.searchQuery = e.target.value;
+            this.updateSearchClearButton();
+            this.filterAndRenderCards();
+        });
+
+        this.ui.searchClear?.addEventListener('click', () => {
+            if (this.ui.searchInput) {
+                this.ui.searchInput.value = '';
+                this.state.searchQuery = '';
+                this.updateSearchClearButton();
+                this.filterAndRenderCards();
+                this.ui.searchInput.focus();
+            }
+        });
+
+        // Category tabs events
+        this.ui.filterTabs?.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                this.ui.filterTabs.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                this.state.selectedCategory = tab.dataset.category;
+                this.filterAndRenderCards();
+            });
+        });
+
+        // Modal events
         document.getElementById('modal-close')?.addEventListener('click', () => this.closeModal());
         
         this.ui.modalOverlay.addEventListener('click', (e) => {
@@ -181,84 +312,189 @@ const ProtocolApp = {
         let tocHtml = '';
         let indexCount = 0;
 
-        const titleRegex = /^[A-ZÁÉÍÓÚÑ\s]{4,}(\.|$|:)/;
-        const numberTitleRegex = /^[0-9]+(\.[0-9]+)*(\.|\.-|\s)/;
-        const letterRegex = /^[a-z]\)/i;
-        const dashRegex = /^-/;
+        // Smart classification keywords for H2
+        const majorHeadings = [
+            "PROYECTO EDUCATIVO INSTITUCIONAL",
+            "VISIÓN INSTITUCIONAL",
+            "MISIÓN",
+            "PRINCIPIOS Y VALORES INSTITUCIONALES",
+            "OBJETIVOS ESTRATÉGICOS",
+            "PERFIL DEL EGRESADO",
+            "LÍNEAS DE ACCIÓN PRIORITARIAS",
+            "VIGENCIA",
+            "DOCUMENTO OFICIAL MINEDUC",
+            "INTRODUCCIÓN",
+            "OBJETIVOS DEL REGLAMENTO INTERNO",
+            "MARCO NORMATIVO LEGAL",
+            "ESTRATEGIAS PREVENTIVAS",
+            "PLANIFICACIÓN DE ACTIVIDAD CON DISPOSITIVOS TECNOLÓGICOS",
+            "MODO AULA",
+            "SOLICITUD DE EXCEPCIÓN"
+        ];
 
         paragraphs.forEach(para => {
-            const sanitizedText = this.escapeHtml(para).replace(/\\n/g, '<br>');
+            const trimmed = para.trim();
+            if (!trimmed) return;
 
-            if (titleRegex.test(para) && para === para.toUpperCase() && para.length < 150) {
+            // Sanitize text and replace newline marks with HTML breaks
+            let sanitizedText = this.escapeHtml(trimmed).replace(/\\n/g, '<br>');
+
+            // Classification logic
+            let isH2 = false;
+            let isH3 = false;
+            let isLi = false;
+
+            // Check H2 major heading conditions
+            const isChapter = /^(CAPITULO|CAPÍTULO|ANEXO\s*\d*)/i.test(trimmed);
+            const isKnownMajor = majorHeadings.some(h => trimmed.toUpperCase().includes(h));
+            
+            if (isChapter || (isKnownMajor && trimmed === trimmed.toUpperCase() && trimmed.length < 120)) {
+                isH2 = true;
+            } 
+            // Check H3 subheading conditions
+            else {
+                // Decimal numbering like 2.1.- or 6.2.-
+                const isDecimalNumber = /^\s*[0-9]+\.[0-9]+(\.[0-9]+)*(\.-|\.|\s)/.test(trimmed);
+                // Numbered headings like 1. OBJETIVO. (short, uppercase)
+                const isNumberedHeading = /^\s*([0-9]+)\.\s+[A-ZÁÉÍÓÚÑ]/.test(trimmed) && trimmed === trimmed.toUpperCase() && trimmed.length < 90;
+
+                if (isDecimalNumber || isNumberedHeading) {
+                    isH3 = true;
+                } else if (/^[-•]/.test(trimmed) || /^[a-z]\)/i.test(trimmed)) {
+                    // Indented lists or letter-number lists (like a) or -)
+                    isLi = true;
+                }
+            }
+
+            if (isH2) {
                 const id = `section-${indexCount++}`;
                 htmlContent += `<h2 id="${id}">${sanitizedText}</h2>`;
-                tocHtml += `<li><a href="#${id}" class="toc-link">${sanitizedText}</a></li>`;
-            } else if (numberTitleRegex.test(para)) {
+                
+                // Extract clean text for index link
+                let cleanTitle = trimmed.replace(/^(CAPITULO|CAPÍTULO)\s*[0-9]+:?\s*/i, '').trim();
+                if (cleanTitle.length > 55) {
+                    cleanTitle = cleanTitle.substring(0, 52) + '...';
+                }
+                tocHtml += `<li><a href="#${id}" class="toc-link">${this.escapeHtml(cleanTitle)}</a></li>`;
+            } else if (isH3) {
                 const id = `section-${indexCount++}`;
                 htmlContent += `<h3 id="${id}">${sanitizedText}</h3>`;
-                tocHtml += `<li><a href="#${id}" class="toc-link toc-sublink">${sanitizedText}</a></li>`;
-            } else if (letterRegex.test(para) || dashRegex.test(para)) {
-                htmlContent += `<div class="indent-item">${sanitizedText}</div>`;
-            } else if (para.trim()) {
+                
+                let cleanSub = trimmed.replace(/^\s*[0-9]+(\.[0-9]+)*(\.-|\.|\s)\s*/, '').trim();
+                if (cleanSub.length > 60) {
+                    cleanSub = cleanSub.substring(0, 57) + '...';
+                }
+                tocHtml += `<li><a href="#${id}" class="toc-link toc-sublink">${this.escapeHtml(cleanSub)}</a></li>`;
+            } else if (isLi) {
+                // Remove bullet markers at start for dynamic clean lists
+                const listText = sanitizedText.replace(/^[-•]\s*/, '').replace(/^[a-z]\)\s*/i, '');
+                htmlContent += `<div class="indent-item">${listText}</div>`;
+            } else {
                 htmlContent += `<p>${sanitizedText}</p>`;
             }
         });
 
-        // Add index section if there are headings
-        let tocContainerHtml = '';
+        // Build index section for the sidebar (desktop) and accordion (mobile)
+        let sidebarHtml = '';
+        let mobileTocHtml = '';
         if (tocHtml) {
-            tocContainerHtml = `
-                <div class="toc-container" style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid var(--secondary);">
-                    <h3 style="margin-top: 0; color: var(--text-dark);">Índice de Contenidos</h3>
-                    <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0; max-height: 250px; overflow-y: auto; font-size: 0.95rem;">
+            // Sidebar for desktop
+            sidebarHtml = `
+                <aside class="modal-sidebar">
+                    <h3 class="sidebar-title">📋 Índice</h3>
+                    <ul class="sidebar-toc-list">
                         ${tocHtml}
                     </ul>
-                </div>
+                </aside>
+            `;
+            
+            // Accordion for mobile (collapsible using details)
+            mobileTocHtml = `
+                <details class="mobile-toc-details">
+                    <summary class="mobile-toc-summary">
+                        <span>📋 Índice de Contenidos</span>
+                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="mobile-toc-content">
+                        <ul class="mobile-toc-list">
+                            ${tocHtml}
+                        </ul>
+                    </div>
+                </details>
             `;
         }
 
         const externalLinkHtml = hasExternalLink ? `
-            <div style="margin-top: 2rem; padding: 1.5rem; background: #f0f9ff; border-radius: 12px; border-left: 4px solid var(--primary);">
-                <p style="margin: 0 0 1rem 0; font-weight: 600;">📎 Documento Original:</p>
-                <a href="${this.escapeHtml(data.url_externa)}" target="_blank" rel="noopener noreferrer" 
-                   style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+            <div class="external-link-card">
+                <p>📎 Documento Original:</p>
+                <a href="${this.escapeHtml(data.url_externa)}" target="_blank" rel="noopener noreferrer" class="btn-premium">
                     Abrir documento oficial ↗
                 </a>
             </div>
         ` : '';
 
+        // Render full modular layout inside the modal content
         this.ui.modalContent.innerHTML = `
             <div class="modal-header">
-                <span class="protocol-badge">${data.tipo === 'documento' ? 'Documento' : 'Protocolo'} Oficial</span>
-                <h1>${this.escapeHtml(data.titulo)}</h1>
+                <div class="modal-header-main">
+                    <span class="protocol-badge">${data.tipo === 'documento' ? 'Documento' : 'Protocolo'} Oficial</span>
+                    <h1>${this.escapeHtml(data.titulo)}</h1>
+                </div>
+                <div class="modal-header-actions">
+                    <button class="btn-print" id="modal-print" aria-label="Imprimir o guardar PDF">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                        <span>Imprimir / PDF</span>
+                    </button>
+                </div>
             </div>
-            <div class="modal-body document-view">
-                <div class="document-content">
-                    ${tocContainerHtml}
-                    ${htmlContent}
-                    ${externalLinkHtml}
+            <div class="modal-layout-container">
+                ${sidebarHtml}
+                <div class="modal-body document-view">
+                    <div class="document-content">
+                        ${mobileTocHtml}
+                        ${htmlContent}
+                        ${externalLinkHtml}
+                    </div>
                 </div>
             </div>
         `;
         
-        this.ui.modalContent.querySelector('.modal-body').scrollTop = 0;
+        // Reset scroll position on opening
+        const modalBody = this.ui.modalContent.querySelector('.modal-body');
+        if (modalBody) modalBody.scrollTop = 0;
 
-        // Add smooth scrolling to TOC links
+        // Bind smooth scrolling to all TOC links
         this.ui.modalContent.querySelectorAll('.toc-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
-                const modalBody = this.ui.modalContent.querySelector('.modal-body');
+                const currentModalBody = this.ui.modalContent.querySelector('.modal-body');
                 
-                if (targetElement && modalBody) {
-                    modalBody.scrollTo({
-                        top: targetElement.offsetTop - 20, // Add a little padding
+                if (targetElement && currentModalBody) {
+                    // Safe browser-agnostic bounding scroll Math
+                    const targetPosition = targetElement.getBoundingClientRect().top - currentModalBody.getBoundingClientRect().top + currentModalBody.scrollTop - 20;
+                    currentModalBody.scrollTo({
+                        top: targetPosition,
                         behavior: 'smooth'
                     });
+                    
+                    // Collapse accordion automatically on mobile click
+                    const mobileDetails = this.ui.modalContent.querySelector('.mobile-toc-details');
+                    if (mobileDetails && mobileDetails.hasAttribute('open')) {
+                        mobileDetails.removeAttribute('open');
+                    }
                 }
             });
         });
+
+        // Bind Print/PDF action
+        const printBtn = this.ui.modalContent.querySelector('#modal-print');
+        if (printBtn) {
+            printBtn.addEventListener('click', () => {
+                window.print();
+            });
+        }
     }
 };
 
