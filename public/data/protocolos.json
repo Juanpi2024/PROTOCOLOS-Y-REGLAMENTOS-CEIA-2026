@@ -3671,5 +3671,153 @@
       "-Alumnos.",
       "-Archivo C.E.I.A."
     ]
+  },
+  "pise_ceia": {
+    "titulo": "PLAN INTEGRAL DE SEGURIDAD ESCOLAR (PISE) 2026",
+    "tipo": "protocolo",
+    "icono": "https://cdn-icons-png.flaticon.com/512/1089/1089129.png",
+    "url_externa": "https://docs.google.com/document/d/1febakCquvv6KhTeV7Ed_y8zw0TWXJZvU/edit?usp=sharing&ouid=109069230728207428732&rtpof=true&sd=true",
+    "contenido_completo": [
+      "PLAN INTEGRAL DE SEGURIDAD ESCOLAR (PISE) - CEIA JUANITA ZÚÑIGA FUENTES",
+      "El Plan Integral de Seguridad Escolar (PISE) del CEIA Juanita Zúñiga Fuentes de Parral es el marco regulatorio e instrumental de preparación de la comunidad educativa ante situaciones de riesgo, emergencias, catástrofes y desastres. Su principal objetivo es resguardar la integridad de los escolares, docentes, directivos, asistentes de la educación y comunidad en general mientras realizan sus labores formativas.",
+      "I. OBJETIVOS ESTRATÉGICOS DEL PISE",
+      "• Generar en nuestra comunidad escolar una actitud de autoprotección, teniendo por sustento una responsabilidad colectiva frente a la seguridad.",
+      "• Proporcionar a los escolares de nuestro establecimiento un efectivo ambiente de seguridad integral mientras cumplen con sus actividades formativas.",
+      "• Constituir en nuestro establecimiento un modelo de protección y seguridad, replicable en el hogar y en su entorno.",
+      "La misión de nuestro comité es coordinar a toda la comunidad escolar de nuestro establecimiento, a fin de ir logrando una activa y masiva participación en un proceso que nos compromete a todos, puesto que apunta a su mayor seguridad y, por ende, a su mejor calidad de vida.",
+      "II. COMITÉ PARITARIO DE HIGIENE Y SEGURIDAD Y COMISIÓN PISE",
+      "El Comité Paritario de Higiene y Seguridad (CPHS) y la Comisión PISE del establecimiento coordinan activamente las medidas de prevención, simulacros e implementación del plan. Está conformado de la siguiente manera:",
+      {
+        "type": "table",
+        "headers": [
+          "Nombre",
+          "Representación / Cargo",
+          "Funciones Principales"
+        ],
+        "rows": [
+          [
+            "Juan José Araya Chandia",
+            "Director (T) / Dirección",
+            "Responsable de la seguridad en el establecimiento, preside y apoya al Comité de seguridad."
+          ],
+          [
+            "María de los Ángeles Canales Amigo",
+            "Inspectora General / Dirección",
+            "Responsable de la seguridad en el establecimiento, apoya al Comité de seguridad."
+          ],
+          [
+            "Guillermo Sepúlveda Maureira",
+            "Docente Coordinador PISE",
+            "Coordina todas las actividades que efectúa el Comité: reuniones, generación de actas, documentos, simulacros."
+          ],
+          [
+            "Omar Alvial Saldias",
+            "Docente",
+            "Cumplir con las tareas encomendadas, comunicar a los docentes la labor general del establecimiento."
+          ],
+          [
+            "Verónica Saavedra Bascuñan",
+            "Docente",
+            "Cumplir con las tareas encomendadas, comunicar a los docentes la labor general del establecimiento."
+          ],
+          [
+            "Constanza Nataly Leiva Muñoz",
+            "Asistente de la Educación",
+            "Cumplir con las tareas del comité, representar y comunicar la labor al estamento de asistentes."
+          ],
+          [
+            "Juan Pablo Ramírez Yañez",
+            "Asistente de la Educación",
+            "Cumplir con las tareas del comité, representar y comunicar la labor al estamento de asistentes."
+          ]
+        ]
+      },
+      "III. METODOLOGÍA PISE: METODOLOGÍA AIDEP",
+      "El PISE se estructura bajo la metodología AIDEP, orientada a la gestión integrada del riesgo en el establecimiento:",
+      "• A - Análisis histórico de los eventos o accidentes acontecidos en la unidad educativa.",
+      "• I - Investigación del contexto, infraestructura y dinámicas escolares.",
+      "• D - Definición de prioridades en torno a los riesgos identificados.",
+      "• E - Elaboración de mapas de riesgos para zonificar las vulnerabilidades.",
+      "• P - Planificación de acciones concretas para la reducción del riesgo de desastres.",
+      "IV. DIAGNÓSTICO DE RIESGOS IDENTIFICADOS EN EL ESTABLECIMIENTO",
+      "A través del levantamiento de información, se han detectado vulnerabilidades clave de infraestructura y operaciones, estableciendo medidas coordinadas con el sostenedor DAEM:",
+      {
+        "type": "table",
+        "headers": [
+          "Riesgo / Situación Detectada",
+          "Ubicación / Sector",
+          "Impactos Eventuales",
+          "Medidas de Mitigación / Acción Planificada",
+          "Responsable"
+        ],
+        "rows": [
+          [
+            "Corredores angostos, desniveles y hoyos en piso",
+            "Patio Interior",
+            "Caídas, golpes, fracturas o esguinces",
+            "Reparar hoyos en corredor interior y demarcar desniveles",
+            "DAEM / Sostenedor"
+          ],
+          [
+            "Patios con desniveles importantes sin señalización",
+            "Patio Central",
+            "Caída de trabajadores y estudiantes",
+            "Instalar cintas de seguridad y colocar señalética de desnivel de piso",
+            "DAEM / Sostenedor"
+          ],
+          [
+            "Tableros eléctricos en malas condiciones (Prioridad 1)",
+            "Patio y Comedor",
+            "Fallas eléctricas, incendios, electrocución o muerte",
+            "Cambio completo y mantención de tableros eléctricos",
+            "DAEM / Sostenedor"
+          ],
+          [
+            "Falta de mantención de pisos y salas de clases",
+            "Salas de Clases",
+            "Caídas, tropiezos y golpes",
+            "Realizar un mantenimiento adecuado a las salas del establecimiento",
+            "DAEM / Sostenedor"
+          ],
+          [
+            "Accidentes por juegos de pelota en recreos",
+            "Patios",
+            "Lesiones, esguinces y golpes accidentales",
+            "Normar, señalizar y delimitar los espacios deportivos",
+            "Unidad Educativa / Comité"
+          ]
+        ]
+      },
+      "V. PROTOCOLO DE ACTUACIÓN ANTE SISMO / TERREMOTO",
+      "En caso de sismos, el plan establece procedimientos precisos para los distintos estamentos, asegurando una evacuación interna ordenada hacia la Zona de Seguridad:",
+      "1. Alarma de Sismo:",
+      "• Ante un sismo, el funcionario en recepción (o el más cercano) tocará la campana de forma continua y reiterada.",
+      "2. Procedimiento para Estudiantes:",
+      "• El estudiante más cercano a la puerta de la sala de clases debe abrirla inmediatamente para evitar que se atranque.",
+      "• Mantener la calma y seguir en todo momento las instrucciones del profesor.",
+      "• Evacuar la sala de manera rápida pero ordenada hacia la zona de seguridad predeterminada.",
+      "• Dirigirse a la Zona de Seguridad 1: Centro del Patio Central (Revisar planos de evacuación pegados en cada sala).",
+      "3. Procedimiento para Profesores / Docentes:",
+      "• Tomar el control del grupo curso, liderar la evacuación y mantener la calma de los estudiantes.",
+      "• El docente DEBE llevar consigo el Libro de Clases en todo momento de la emergencia.",
+      "• Una vez en la Zona de Seguridad, pasar lista para verificar la presencia de la totalidad de los estudiantes y reportar novedades a Inspectoría.",
+      "• Solo regresar a la sala de clases una vez que la dirección entregue la orden de retorno ordenado.",
+      "4. Procedimiento de Corte de Suministros Básicos:",
+      "• Para mitigar riesgos de fugas o incendios durante la evacuación, los encargados asignados cortarán los suministros:",
+      "• Electricidad: Luis Roberto Hernández Guerrero, Rodrigo de Jesús Ponce Candia, Matías Alejandro Batarce Hernández.",
+      "• Agua Potable: César Mauricio Vallejos Monroy, Rodrigo de Jesús Ponce Candia, Matías Alejandro Batarce Hernández.",
+      "• Gas en Cocina: Manipuladora del establecimiento (Tía Carmen) y Ramón Retamal.",
+      "• Gas en Salas de Clases: Profesores de cada aula.",
+      "VI. EVACUACIÓN EXTERNA DEL COLEGIO",
+      "• Solo bajo instrucción explícita de Dirección o Inspectores Generales se determinará la evacuación hacia el exterior del establecimiento si la zona de seguridad interna representa un peligro inminente.",
+      "• La Zona de Seguridad Externa frente a Incendios u otras emergencias mayores se ubica en la calle San Martín.",
+      "• IMPORTANTE: Bajo ninguna circunstancia se permitirá la salida autónoma de estudiantes menores de edad hacia la calle pública, a menos que sean retirados por sus apoderados o en caso de una catástrofe mayor.",
+      "VII. NÚMEROS DE EMERGENCIA",
+      "Ante cualquier siniestro o emergencia grave, comunicarse de inmediato con las redes de apoyo de la comuna de Parral:",
+      "• 🚑 Ambulancia (SAMU): 131",
+      "• 🚒 Bomberos: 132",
+      "• 🚓 Carabineros de Chile: 133",
+      "• 🕵️ PDI (Policía de Investigaciones): 134"
+    ]
   }
 }
