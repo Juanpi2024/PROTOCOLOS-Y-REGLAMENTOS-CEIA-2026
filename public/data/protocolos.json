@@ -1,5 +1,6 @@
 {
   "pei_institucional": {
+    "palabras_clave": ["misión","visión","valores"],
     "titulo": "PROYECTO EDUCATIVO INSTITUCIONAL (PEI) 2022-2027",
     "tipo": "documento",
     "icono": "https://cdn-icons-png.flaticon.com/512/3389/3389081.png",
@@ -447,6 +448,7 @@
     ]
   },
   "reglamento_interno": {
+    "palabras_clave": ["derechos","deberes","faltas graves","sanciones","convivencia escolar","acoso escolar"],
     "titulo": "REGLAMENTO INTERNO DE CONVIVENCIA ESCOLAR (RICE) 2026",
     "tipo": "documento",
     "icono": "https://cdn-icons-png.flaticon.com/512/3233/3233013.png",
@@ -2698,6 +2700,7 @@
     ]
   },
   "protocolo_telefonos": {
+    "palabras_clave": ["dispositivos móviles","excepción","suspensión","modo aula","apoderados"],
     "titulo": "PROTOCOLO : PROHIBIR Y REGULAR EL USO DE DISPOSITIVOS MÓVILES ELECTRÓNICOS DE COMUNICACIÓN PERSONAL EN ESTABLECIMIENTOS EDUCACIONALES. LEY 21.801.",
     "tipo": "protocolo",
     "icono": "https://cdn-icons-png.flaticon.com/512/186/186239.png",
@@ -2763,6 +2766,7 @@
     ]
   },
   "protocolo_camaras": {
+    "palabras_clave": ["grabaciones","autorización","privacidad","acceso","cámaras"],
     "titulo": "PROTOCOLO DE USO DE CÁMARAS DE TELEVIGILANCIA.",
     "tipo": "protocolo",
     "icono": "https://cdn-icons-png.flaticon.com/512/3062/3062081.png",
@@ -2795,6 +2799,7 @@
     ]
   },
   "plan_formacion_ciudadana": {
+    "palabras_clave": ["participación","derechos","democrático","objetivos","actividades"],
     "titulo": "PLAN DE FORMACIÓN CIUDADANA 2026",
     "tipo": "documento",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135810.png",
@@ -2979,6 +2984,7 @@
     ]
   },
   "reglamento_evaluacion": {
+    "palabras_clave": ["promoción","asistencia","calificaciones","evaluación","inasistencia"],
     "titulo": "REGLAMENTO DE EVALUACIÓN Y PROMOCIÓN 2026",
     "tipo": "documento",
     "icono": "https://cdn-icons-png.flaticon.com/512/9041/9041743.png",
@@ -3673,6 +3679,7 @@
     ]
   },
   "pise_ceia": {
+    "palabras_clave": ["sismo","incendio","evacuación","riesgos","seguridad"],
     "titulo": "PLAN INTEGRAL DE SEGURIDAD ESCOLAR (PISE) 2026",
     "tipo": "protocolo",
     "icono": "https://cdn-icons-png.flaticon.com/512/1089/1089129.png",

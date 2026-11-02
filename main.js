@@ -4,6 +4,8 @@
  *           sticky two-column modal layout, print/PDF system, smart parser
  */
 
+import { bindDocumentSearch } from './document-search.js';
+
 const ProtocolApp = {
     state: {
         data: null,
@@ -276,6 +278,7 @@ const ProtocolApp = {
 
     updateURLFromHash() {
         const hash = window.location.hash.slice(1);
+        if (this.state.isModalOpen && this.state.activeProtocolKey === hash) return;
         if (hash && this.state.data && this.state.data[hash]) {
             this.openProtocol(hash, false);
         }
@@ -484,17 +487,29 @@ const ProtocolApp = {
                     </button>
                 </div>
             </div>
+            <section class="document-search" aria-label="Buscar dentro de este documento">
+                <label for="document-search-input">Buscar dentro de este documento</label>
+                <div class="document-search-controls">
+                    <input id="document-search-input" type="search" placeholder="Escribe una palabra o frase…" aria-describedby="document-search-status">
+                    <button id="document-search-previous" type="button" disabled>Anterior</button>
+                    <button id="document-search-next" type="button" disabled>Siguiente</button>
+                    <button id="document-search-clear" type="button">Limpiar</button>
+                </div>
+                <div id="document-keywords" aria-label="Temas sugeridos"></div>
+                <p id="document-search-status" role="status" aria-live="polite"></p>
+            </section>
             <div class="modal-layout-container">
                 ${sidebarHtml}
                 <div class="modal-body document-view">
                     <div class="document-content">
                         ${mobileTocHtml}
-                        ${htmlContent}
+                        <div class="document-text">${htmlContent}</div>
                         ${externalLinkHtml}
                     </div>
                 </div>
             </div>
         `;
+        bindDocumentSearch(this.ui.modalContent, data.palabras_clave || []);
         
         // Reset scroll position on opening
         const modalBody = this.ui.modalContent.querySelector('.modal-body');
