@@ -4,7 +4,7 @@
  *           sticky two-column modal layout, print/PDF system, smart parser
  */
 
-import { bindDocumentSearch } from './document-search.js';
+import { bindDocumentSearch } from './topic-search.js';
 
 const ProtocolApp = {
     state: {
@@ -488,9 +488,9 @@ const ProtocolApp = {
                 </div>
             </div>
             <section class="document-search" aria-label="Buscar dentro de este documento">
-                <label for="document-search-input">Buscar dentro de este documento</label>
+                <label for="document-search-input">Buscar por tema o capítulo</label>
                 <div class="document-search-controls">
-                    <input id="document-search-input" type="search" placeholder="Escribe una palabra o frase…" aria-describedby="document-search-status">
+                    <input id="document-search-input" type="search" placeholder="Ej.: qué pasa si falto a una evaluación" aria-describedby="document-search-status">
                     <button id="document-search-previous" type="button" disabled>Anterior</button>
                     <button id="document-search-next" type="button" disabled>Siguiente</button>
                     <button id="document-search-clear" type="button">Limpiar</button>
@@ -503,6 +503,11 @@ const ProtocolApp = {
                 <div class="modal-body document-view">
                     <div class="document-content">
                         ${mobileTocHtml}
+                        <details class="topic-results-panel" open>
+                            <summary>Capítulos y apartados del documento</summary>
+                            <p>Busca un tema, una situación o el nombre de un capítulo. Selecciona un resultado para leer el apartado original.</p>
+                            <div id="document-search-results"></div>
+                        </details>
                         <div class="document-text">${htmlContent}</div>
                         ${externalLinkHtml}
                     </div>
